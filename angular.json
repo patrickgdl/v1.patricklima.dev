@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/prism.css",
+              "src/assets/scss/section.scss"
             ],
             "scripts": []
           },
