@@ -1,33 +1,35 @@
-@import "vars.scss";
-@import "anchor.scss";
-@import "bio.scss";
-@import "blockquote.scss";
-@import "headings.scss";
-@import "horizontal-rule.scss";
-@import "image.scss";
-@import "layout.scss";
-@import "lists.scss";
-@import "logo.scss";
-@import "navigation.scss";
-@import "paragraph.scss";
-@import "progress.scss";
-@import "social-links.scss";
-@import "subscription.scss";
-@import "tables.scss";
-@import "section.scss";
-@import "articles.scss";
-@import "home-articles.scss";
-@import "code.scss";
-@import "article.scss";
-@import "authors.scss";
-@import "paginator.scss";
+// Variables
+@import 'custom/variables';
 
+// Components
+@import 'custom/anchor';
+@import 'custom/article';
+@import 'custom/articles';
+@import 'custom/authors';
+@import 'custom/bio';
+@import 'custom/blockquote';
+@import 'custom/code';
+@import 'custom/headings';
+@import 'custom/home-articles';
+@import 'custom/horizontal-rule';
+@import 'custom/image';
+@import 'custom/layout';
+@import 'custom/lists';
+@import 'custom/logo';
+@import 'custom/navigation';
+@import 'custom/paginator';
+@import 'custom/paragraph';
+@import 'custom/progress';
+@import 'custom/section';
+@import 'custom/social-links';
+@import 'custom/subscription';
+@import 'custom/tables';
 
 /**
  * Thanks to Benjamin De Cock
  * https://gist.github.com/bendc/ac03faac0bf2aee25b49e5fd260a727d
  */
- :root {
+:root {
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -37,9 +39,8 @@
 }
 
 @font-face {
-  font-family: "-apple-system", "BlinkMacSystemFont", "San Francisco",
-    "Helvetica Neue", "Helvetica", "Ubuntu", "Roboto", "Noto", "Segoe UI",
-    "Arial", sans-serif;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', 'Segoe UI', 'Arial',
+    sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -48,7 +49,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
   font-size: inherit;
@@ -57,7 +58,7 @@
 :root {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -67,9 +68,8 @@
 }
 
 body {
-  font-family: "-apple-system", "BlinkMacSystemFont", "San Francisco",
-    "Helvetica Neue", "Helvetica", "Ubuntu", "Roboto", "Noto", "Segoe UI",
-    "Arial", sans-serif;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', 'Segoe UI', 'Arial',
+    sans-serif;
   font-size: 1.6rem;
   margin: 0;
   font-weight: 400;
@@ -99,9 +99,8 @@ input,
 textarea,
 select,
 button {
-  font-family: "-apple-system", "BlinkMacSystemFont", "San Francisco",
-    "Helvetica Neue", "Helvetica", "Ubuntu", "Roboto", "Noto", "Segoe UI",
-    "Arial", sans-serif;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', 'Segoe UI', 'Arial',
+    sans-serif;
 }
 
 .underline {
@@ -128,8 +127,8 @@ samp {
 fieldset,
 button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   background: transparent;
@@ -154,7 +153,7 @@ input {
     outline: none;
   }
 
-  &[type="number"] {
+  &[type='number'] {
     width: auto;
   }
 }
@@ -163,31 +162,31 @@ img.Image__Zoom ~ div {
   background: transparent !important;
 }
 
-.Image__Small{
+.Image__Small {
   width: 100%;
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
-  img{
+  img {
     width: 100%;
   }
 }
 
-.Image__medium{
+.Image__medium {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
-  img{
+  img {
     width: 100%;
   }
 }
 
-.Image__large{
+.Image__large {
   width: 100%;
   margin-bottom: 35px;
-  img{
+  img {
     width: 100vw;
     position: relative;
     left: 50%;
@@ -197,30 +196,46 @@ img.Image__Zoom ~ div {
   }
 }
 
-.author-alc-section{
+.author-alc-section {
   padding-left: 0;
   padding-right: 0;
 }
 
-.icon-image{
-  path{
+.icon-image {
+  path {
     fill: var(--primary);
   }
 }
 
-img{
+img {
   -webkit-animation-name: image-load-in;
-          animation-name: image-load-in;
+  animation-name: image-load-in;
   -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  animation-duration: 0.8s;
 }
 
 @-webkit-keyframes image-load-in {
-  0% {-webkit-filter: blur(8px);filter: blur(8px); opacity: 0;}
-  100% {-webkit-filter: blur(0);filter: blur(0); opacity: 1;}
+  0% {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 
 @keyframes image-load-in {
-  0% {-webkit-filter: blur(8px);filter: blur(8px); opacity: 0;}
-  100% {-webkit-filter: blur(0);filter: blur(0); opacity: 1;}
+  0% {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
