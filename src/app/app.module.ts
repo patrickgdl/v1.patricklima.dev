@@ -14,6 +14,8 @@ import { TilesComponent } from './components/icons/ui/tiles/tiles.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { ArticlesComponent } from './sections/articles/articles/articles.component';
 import { HeroComponent } from './sections/articles/hero/hero.component';
+import { ListComponent } from './sections/articles/list/list.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HeroComponent } from './sections/articles/hero/hero.component';
     ArticlesComponent,
     BioComponent,
     TilesComponent,
-    RowsComponent
+    RowsComponent,
+    ListComponent,
+    PaginatorComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
