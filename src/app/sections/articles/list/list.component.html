@@ -1,7 +1,7 @@
 <section class="section nartrow">
-  <div id="articlesList" class="articles-list-container show-details">
+  <div id="articlesList" class="articles-list-container show-details" *ngFor="let article of articles">
     <div class="post-row">
-      <a href="" class="article-link" id="article-link-bigger">
+      <a href="article.hero.full.base64" class="article-link" id="article-link-bigger">
         <div class="article-data-outer">
           <div class="image-container">
             <img src="" class="article-image" />
@@ -9,14 +9,12 @@
 
           <div class="article-data">
             <h2 class="article-title">
-              Article Title
+              {{ article.title }}
             </h2>
             <p class="article-excerpt">
-              Artitle Excerpt
+              {{ article.excerpt }}
             </p>
-            <div class="article-metadata">
-              January 2, 2006 • 2 min read
-            </div>
+            <div class="article-metadata">{{ article.date }} • {{ article.timeToRead }}</div>
           </div>
         </div>
       </a>

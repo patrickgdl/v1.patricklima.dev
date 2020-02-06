@@ -22,6 +22,13 @@ export class AppComponent implements OnInit {
     } else {
       this.makeLight();
     }
+
+    const author = {
+      bio: 'Written by You. This is where your author bio lives. Share your work, yourjoys and of course, your Twitter handle.',
+      id: 'cebebc26-b80b-5c45-b29b-fb56bd6b7b61',
+      name: 'Dennis Brotzky',
+      slug: '/authors/Dennis-Brotzky'
+    };
   }
 
   makeDark() {
