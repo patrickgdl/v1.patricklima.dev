@@ -1,20 +1,37 @@
-<section class="section nartrow">
-  <div id="articlesList" class="articles-list-container show-details" *ngFor="let article of articles">
-    <div class="post-row">
-      <a href="article.hero.full.base64" class="article-link" id="article-link-bigger">
+  <div id="articlesList" class="articles-list-container show-details">
+    <div class="post-row" *ngFor="let article of articles$ | async; let idx = index; let odd=odd; let even=even">
+      <a [href]="article.slug" class="article-link" [id]="even ? 'article-link-bigger' : ''">
         <div class="article-data-outer">
           <div class="image-container">
-            <img src="" class="article-image" />
+            <img [src]="article[0].hero.full.base64" class="article-image" />
           </div>
 
           <div class="article-data">
             <h2 class="article-title">
-              {{ article.title }}
+              {{ article[0].title }}
             </h2>
             <p class="article-excerpt">
-              {{ article.excerpt }}
+              {{ article[0].excerpt }}
             </p>
-            <div class="article-metadata">{{ article.date }} • {{ article.timeToRead }}</div>
+            <div class="article-metadata">{{ article[0].date }} • {{ article[0].timeToRead }}</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="article.slug" class="article-link" [id]="even ? '' : 'article-link-bigger'">
+        <div class="article-data-outer">
+          <div class="image-container">
+            <img [src]="article[1].hero.full.base64" class="article-image" />
+          </div>
+
+          <div class="article-data">
+            <h2 class="article-title">
+              {{ article[1].title }}
+            </h2>
+            <p class="article-excerpt">
+              {{ article[1].excerpt }}
+            </p>
+            <div class="article-metadata">{{ article[1].date }} • {{ article[1].timeToRead }}</div>
           </div>
         </div>
       </a>
@@ -22,4 +39,3 @@
   </div>
 
   <app-paginator></app-paginator>
-</section>
