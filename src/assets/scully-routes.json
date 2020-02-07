@@ -1,0 +1,5 @@
+[
+  { "route": "/" },
+  { "route": "/blog/2020-02-07-blog", "title": "2020-02-07-blog", "description": "blog description", "publish": false },
+  { "route": "/blog/this-is-my-post", "title": "This is my post", "description": "blog description", "publish": false }
+]
