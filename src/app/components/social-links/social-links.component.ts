@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-social-links',
-  template: `
-    <div class="social-icon-outer">
-      <div class="social-icon-container"></div>
-    </div>
-  `,
+  templateUrl: './social-links.component.html',
   styleUrls: ['./social-links.component.scss']
 })
 export class SocialLinksComponent implements OnInit {
