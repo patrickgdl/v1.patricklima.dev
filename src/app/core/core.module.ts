@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
-import { LinkComponent } from '../components/icons/ui/link/link.component';
-import { LogoComponent } from '../components/icons/ui/logo/logo.component';
+import { LinkComponent } from '../components/icons/link/link.component';
+import { LogoComponent } from '../components/icons/logo/logo.component';
 import { SocialLinksComponent } from '../components/social-links/social-links.component';
 
 @NgModule({
