@@ -3,4 +3,5 @@ export interface Post {
   description: string;
   route: string;
   number: number;
+  slug: string;
 }

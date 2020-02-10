@@ -11,16 +11,23 @@ const dateRegex = /(\d\d?-\d\d?-\d\d\d\d)/;
 export class Posts {
   constructor(private _scullyRoutes: ScullyRoutesService) {}
 
-  episodes$ = this._scullyRoutes.available$.pipe(
+  /**
+   * Taking the flat array of articles [{}, {}, {}...]
+   * and turning it into an array of pairs of articles [[{}, {}], [{}, {}], [{}, {}]...]
+   * This makes it simpler to create the grid
+   */
+
+  posts$ = this._scullyRoutes.available$.pipe(
     map(routeList => {
-      routeList = routeList
-        .filter(r => dateRegex.test(r.route))
-        .sort((a, b) => {
-          const adate = dateRegex.exec(a.route)[0];
-          const bdate = dateRegex.exec(b.route)[0];
-          return new Date(bdate).getTime() - new Date(adate).getTime();
-        });
-      return routeList.filter((route: ScullyRoute) => route.route.startsWith(`/post/`)).map((e, idx) => ({ ...e, number: routeList.length - idx }));
+      return routeList
+        .filter((route: ScullyRoute) => route.route.startsWith(`/post/`))
+        .map((e, idx) => ({ ...e, number: routeList.length - idx }))
+        .reduce((result, value, index, array) => {
+          if (index % 2 === 0) {
+            result.push(array.slice(index, index + 2));
+          }
+          return result;
+        }, []);
     })
   ) as Observable<Post[]>;
 }

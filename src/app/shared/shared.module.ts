@@ -8,6 +8,7 @@ import { PaginatorComponent } from '../components/paginator/paginator.component'
 import { ArticlesComponent } from '../sections/articles/articles.component';
 import { HeroComponent } from '../sections/hero/hero.component';
 import { ListComponent } from '../sections/list/list.component';
+import { Posts } from './posts';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,12 @@ import { ListComponent } from '../sections/list/list.component';
     ListComponent,
     PaginatorComponent
   ],
-  imports: [CommonModule]
+  imports: [CommonModule],
+  providers: [
+    {
+      provide: Posts,
+      useClass: Posts
+    }
+  ]
 })
 export class SharedModule {}

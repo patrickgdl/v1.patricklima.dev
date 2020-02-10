@@ -1,37 +1,37 @@
   <div id="articlesList" class="articles-list-container show-details">
-    <div class="post-row" *ngFor="let article of articles$ | async; let idx = index; let odd=odd; let even=even">
-      <a [href]="article.slug" class="article-link" [id]="even ? 'article-link-bigger' : ''">
+    <div class="post-row" *ngFor="let post of posts; let idx = index; let odd=odd; let even=even">
+      <a [href]="post[0].route" class="article-link" [id]="even ? 'article-link-bigger' : ''">
         <div class="article-data-outer">
           <div class="image-container">
-            <img [src]="article[0].hero.full.base64" class="article-image" />
+            <img src="" class="article-image" />
           </div>
 
           <div class="article-data">
             <h2 class="article-title">
-              {{ article[0].title }}
+              {{ post[0].title }}
             </h2>
             <p class="article-excerpt">
-              {{ article[0].excerpt }}
+              {{ post[0].description }}
             </p>
-            <div class="article-metadata">{{ article[0].date }} • {{ article[0].timeToRead }}</div>
+            <!-- <div class="article-metadata">{{ article[0].date }} • {{ article[0].timeToRead }}</div> -->
           </div>
         </div>
       </a>
 
-      <a href="article.slug" class="article-link" [id]="even ? '' : 'article-link-bigger'">
+      <a [href]="post[0].route" class="article-link" [id]="even ? '' : 'article-link-bigger'">
         <div class="article-data-outer">
           <div class="image-container">
-            <img [src]="article[1].hero.full.base64" class="article-image" />
+            <img src="" class="article-image" />
           </div>
 
           <div class="article-data">
             <h2 class="article-title">
-              {{ article[1].title }}
+              {{ post[1].title}}
             </h2>
             <p class="article-excerpt">
-              {{ article[1].excerpt }}
+              {{ post[1].description }}
             </p>
-            <div class="article-metadata">{{ article[1].date }} • {{ article[1].timeToRead }}</div>
+            <!-- <div class="article-metadata">{{ article[1].date }} • {{ article[1].timeToRead }}</div> -->
           </div>
         </div>
       </a>
