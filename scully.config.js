@@ -1,6 +1,6 @@
 exports.config = {
   projectRoot: "./src/app",
-  outDir: './dist/static',
+  outDir: './build',
   routes: {
     '/post/:slug': {
       type: 'contentFolder',
