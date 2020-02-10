@@ -2,10 +2,10 @@ exports.config = {
   projectRoot: "./src/app",
   outDir: './dist/static',
   routes: {
-    '/blog/:slug': {
+    '/post/:slug': {
       type: 'contentFolder',
       slug: {
-        folder: "./blog"
+        folder: "./posts"
       }
     },
   }

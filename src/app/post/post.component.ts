@@ -1,16 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router, ROUTES } from '@angular/router';
-
-declare var ng: any;
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css'],
+  selector: 'app-posts',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
 })
-export class BlogComponent implements OnInit {
+export class PostComponent implements OnInit {
   progressBar: HTMLElement;
   scrollProgress: HTMLElement;
   articleSubscription: number;
