@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ComponentsModule } from '@scullyio/ng-lib';
+
+import { AuthorComponent } from './hero/author/author.component';
+import { HeroComponent } from './hero/hero.component';
 import { PostRoutingModule } from './post-routing.module';
 import { PostComponent } from './post.component';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
-  declarations: [PostComponent],
+  declarations: [PostComponent, AuthorComponent, HeroComponent, ProgressComponent],
   imports: [CommonModule, PostRoutingModule, ComponentsModule]
 })
 export class PostModule {}

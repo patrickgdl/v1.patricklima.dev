@@ -1,24 +1,23 @@
-import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
-  preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
+  selector: 'app-progress',
+  templateUrl: './progress.component.html',
+  styles: []
 })
-export class PostComponent implements OnInit {
+export class ProgressComponent implements OnInit {
   progressBar: HTMLElement;
   scrollProgress: HTMLElement;
+
   articleSubscription: number;
   articleNext: number;
   bottomOffset: number;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor() { }
 
   ngOnInit() {
     this.progressBar = document.getElementById('progressBar');
+
     this.scrollProgress = document.getElementById('progressIndicator');
 
     if (document.getElementById('subscriptionSection')) {
@@ -39,11 +38,6 @@ export class PostComponent implements OnInit {
     this.bottomOffset += this.bottomOffset * 1.1;
   }
 
-  @HostListener('window:scroll', ['$event'])
-  scroll(event: any) {
-    this.updateProgress();
-  }
-
   updateProgress() {
     const percentScrolled = (window.pageYOffset / document.body.scrollHeight) * (100 + this.bottomOffset);
 
@@ -62,4 +56,5 @@ export class PostComponent implements OnInit {
       }, 500);
     }
   }
+
 }
