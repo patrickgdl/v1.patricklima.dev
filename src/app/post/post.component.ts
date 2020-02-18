@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { Post } from './../models/post.interface';
@@ -46,11 +46,6 @@ export class PostComponent implements OnInit {
     this._posts.posts$.subscribe(posts => {
       this.currentPost = posts.filter(e => e.route === this._router.routerState.snapshot.url).pop();
     });
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  scroll(event: any) {
-    this.updateProgress();
   }
 
   updateProgress() {

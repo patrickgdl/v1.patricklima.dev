@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html'
+  selector: 'app-post-hero',
+  templateUrl: './post-hero.component.html'
 })
-export class HeroComponent implements OnInit {
+export class PostHeroComponent implements OnInit {
   @Input() title: string;
 
   constructor() {}

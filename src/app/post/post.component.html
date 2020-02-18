@@ -1,10 +1,8 @@
-<ng-container *ngIf="currentPost">
-  <app-hero title="currentPost.title"></app-hero>
+<app-post-hero title="currentPost.title"></app-post-hero>
 
-  <app-progress></app-progress>
+<app-progress></app-progress>
 
-  <article id="articleContent" class="post-content">
-    <!-- This is where Scully will inject the static HTML -->
-    <scully-content></scully-content>
-  </article>
-</ng-container>
+<article id="articleContent" class="post-content">
+  <!-- This is where Scully will inject the static HTML -->
+  <scully-content></scully-content>
+</article>
