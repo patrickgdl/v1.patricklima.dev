@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
     </a>
   `
 })
-export class AuthorComponent implements OnInit {
+export class PostHeroAuthorComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
