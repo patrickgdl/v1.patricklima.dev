@@ -1,3 +1,4 @@
+import { SocialLinksComponent } from './../components/social-links/social-links.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -8,8 +9,8 @@ import { BioModule } from './../components/bio/bio.module';
 import { Posts } from './posts';
 
 @NgModule({
-  declarations: [TilesComponent, RowsComponent, PaginatorComponent],
-  exports: [TilesComponent, RowsComponent, PaginatorComponent, BioModule],
+  declarations: [TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent],
+  exports: [TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent, BioModule],
   imports: [CommonModule],
   providers: [
     {

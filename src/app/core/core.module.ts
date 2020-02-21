@@ -5,25 +5,24 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { LinkComponent } from '../components/icons/link/link.component';
 import { LogoComponent } from '../components/icons/logo/logo.component';
-import { SocialLinksComponent } from '../components/social-links/social-links.component';
+import { SharedModule } from './../shared/shared.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     LogoComponent,
     LinkComponent,
-    FooterComponent,
-    SocialLinksComponent
+    FooterComponent
   ],
   exports: [
     HeaderComponent,
     LogoComponent,
     LinkComponent,
-    FooterComponent,
-    SocialLinksComponent
+    FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class CoreModule { }
