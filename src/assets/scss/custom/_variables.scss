@@ -1,4 +1,4 @@
-/*BREAKPOINTS*/
+/* BREAKPOINTS */
 $phone_small: 320px;
 $phone: 376px;
 $phablet: 540px;
@@ -8,15 +8,15 @@ $desktop_medium: 1280px;
 $desktop_large: 1440px;
 
 body{
-    /*FONTS*/
+    /* FONTS */
     --serif: "Merriweather", Georgia, Serif;
     --sanserif: "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "San Francisco", "Helvetica Neue", "Helvetica", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif;
     --monospace: "Operator Mono", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
 
-    /*COLOR MODE TRANSITION*/
+    /* COLOR MODE TRANSITION */
     --color-mode-transition: background 0.25s var(--ease-in-out-quad), color 0.25s var(--ease-in-out-quad);
 
-    /*PRIMARY COLORS*/
+    /* PRIMARY COLORS */
     --primary: #000;
     --secondary: #73737D;
     --grey: #73737D;
@@ -35,7 +35,7 @@ body{
     --inputBackground: rgba(0, 0, 0, 0.05);
     --tooltip: lightgrey;
 
-    /*DARK COLORS*/
+    /* DARK COLORS */
     --dark-grey: #73737D;
     --dark-primary: #fff;
     --dark-secondary: #fff;
@@ -53,7 +53,7 @@ body{
     --dark-horizontalRule: rgba(255, 255, 255, 0.15);
     --dark-inputBackground: rgba(255, 255, 255, 0.07);
 
-    /*PRISM*/
+    /* PRISM */
     --token: #fff;
     --languageJavascript: #e8696b;
     --javascript: #e8696b;
