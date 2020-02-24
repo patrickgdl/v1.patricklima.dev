@@ -11,12 +11,10 @@ export class HeaderComponent implements OnInit {
   moonIcon: HTMLElement;
   sunIcon: HTMLElement;
   moonOrSunIcon: HTMLElement;
-  bodyElement: HTMLElement;
 
   constructor(private _themeService: ThemeService) {}
 
   ngOnInit() {
-    this.bodyElement = document.getElementsByTagName('BODY')[0] as HTMLElement;
     this.moonOrSunIcon = document.getElementById('moonOrSun');
     this.sunIcon = document.getElementById('sunRays');
     this.moonIcon = document.getElementById('moonMask');

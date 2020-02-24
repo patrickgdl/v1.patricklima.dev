@@ -19,7 +19,7 @@ export class Posts {
 
   posts$ = this._scullyRoutes.available$.pipe(
     map(routeList => {
-      return routeList
+      const resulta = routeList
         .filter((route: ScullyRoute) => route.route.startsWith(`/post/`))
         .map((e, idx) => ({ ...e, number: routeList.length - idx }))
         .reduce((result, value, index, array) => {
@@ -28,6 +28,10 @@ export class Posts {
           }
           return result;
         }, []);
+
+      console.log(resulta);
+
+      return resulta;
     })
   ) as Observable<Post[]>;
 }
