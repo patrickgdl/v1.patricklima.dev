@@ -1,13 +1,14 @@
 <!--<pre>{{currentPost$ | async | json}}</pre>-->
+<section class="section narrow">
+  <ng-container *ngIf="currentPost$ | async as currentPost">
+    <app-post-hero [post]="currentPost"></app-post-hero>
+  </ng-container>
 
-<ng-container *ngIf="currentPost$ | async as currentPost">
-  <app-post-hero [post]="currentPost"></app-post-hero>
-</ng-container>
+  <app-progress></app-progress>
 
-<app-progress></app-progress>
+  <article id="articleContent" class="post-content">
+    <scully-content></scully-content>
+  </article>
 
-<article id="articleContent" class="post-content">
-  <scully-content></scully-content>
-</article>
-
-<app-post-next></app-post-next>
+  <app-post-next></app-post-next>
+</section>
