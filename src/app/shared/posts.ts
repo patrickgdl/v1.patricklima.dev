@@ -5,33 +5,27 @@ import { map } from 'rxjs/operators';
 
 import { Post } from './../models/post.interface';
 
-const dateRegex = /(\d\d?-\d\d?-\d\d\d\d)/;
+const dateRegex = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
 
 @Injectable()
 export class Posts {
   constructor(private _scullyRoutes: ScullyRoutesService) {}
 
   /**
-   * Taking the flat array of articles [{}, {}, {}...]
-   * and turning it into an array of pairs of articles [[{}, {}], [{}, {}], [{}, {}]...]
-   * This makes it simpler to create the grid
+   * Taking the array of ScullyRoutes,
+   * filtering it by only Posts from route name,
+   * matching only yyyy/mm/dd routes,
+   * mapping it to have a date based on route name and
+   * sorting it by date
    */
 
   posts$ = this._scullyRoutes.available$.pipe(
     map(routeList => {
-      const resulta = routeList
+      return routeList
         .filter((route: ScullyRoute) => route.route.startsWith(`/post/`))
-        .map((e, idx) => ({ ...e, number: routeList.length - idx }))
-        .reduce((result, value, index, array) => {
-          if (index % 2 === 0) {
-            result.push(array.slice(index, index + 2));
-          }
-          return result;
-        }, []);
-
-      console.log(resulta);
-
-      return resulta;
+        .filter((route: ScullyRoute) => dateRegex.test(route.route))
+        .map(route => ({ ...route, date: new Date(dateRegex.exec(route.route)[0]) }))
+        .sort((a, b) => (new Date(a.date).getTime() - new Date(b.date).getTime()));
     })
   ) as Observable<Post[]>;
 }

@@ -8,7 +8,7 @@ import { Post } from './../../models/post.interface';
   styles: []
 })
 export class ListComponent implements OnInit {
-  @Input() posts: Post[];
+  @Input() pairPosts: Post[][];
 
   constructor() {}
 

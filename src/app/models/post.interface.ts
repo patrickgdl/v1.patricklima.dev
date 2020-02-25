@@ -2,6 +2,11 @@ export interface Post {
   title: string;
   description: string;
   route: string;
-  number: number;
+  timeToRead: number;
   slug: string;
+  slugs: string[];
+  tags: string[];
+  hero: string;
+  coverImage: string;
+  date: Date;
 }

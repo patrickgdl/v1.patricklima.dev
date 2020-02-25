@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Post } from './../models/post.interface';
 import { Posts } from './../shared/posts';
@@ -12,7 +14,7 @@ import { Posts } from './../shared/posts';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class PostComponent implements OnInit {
-  currentPost: Post;
+  currentPost$: Observable<Post>;
 
   progressBar: HTMLElement;
   scrollProgress: HTMLElement;
@@ -43,9 +45,7 @@ export class PostComponent implements OnInit {
     this.bottomOffset = ((this.articleSubscription + this.articleNext + footerSection + 250) / document.body.scrollHeight) * 100;
     this.bottomOffset += this.bottomOffset * 1.1;
 
-    this._posts.posts$.subscribe(posts => {
-      this.currentPost = posts.filter(e => e.route === this._router.routerState.snapshot.url).pop();
-    });
+    this.currentPost$ = this._posts.posts$.pipe(map(posts => posts.filter(e => e.route === this._router.routerState.snapshot.url).pop()));
   }
 
   @HostListener('window:scroll', ['$event'])

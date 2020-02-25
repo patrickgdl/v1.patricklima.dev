@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: []
 })
 export class ArticlesComponent implements OnInit {
-  @Input() posts: Post[];
+  @Input() pairPosts: Post[][];
 
   constructor() {}
 

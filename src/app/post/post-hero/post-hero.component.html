@@ -1,18 +1,18 @@
 <section class="section narrow">
   <div class="article-hero">
     <header class="article-header">
-      <h1 class="article-hero-heading">Title</h1>
+      <h1 class="article-hero-heading">{{post.title}}</h1>
       <div class="article-hero-subtitle">
         <div class="article-meta">
           <app-author></app-author>
 
-          2 de Janeiro de 2020 • 8 min leitura
+          2 de Janeiro de 2020 • {{post.timeToRead}} min leitura
         </div>
       </div>
     </header>
 
     <div class="article-hero-image">
-      <img src="" />
+      <img [src]="post.hero" />
     </div>
   </div>
 </section>

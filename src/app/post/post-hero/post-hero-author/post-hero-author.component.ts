@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-author',
   template: `
-    <a href="" class="article-author-link">
+    <a [routerLink]="['./about']" class="article-author-link">
       <div class="article-author-avatar">
-        <img src="" />
+        <img src="assets/img/avatar.jpg" />
       </div>
 
       <strong>Patrick Lima</strong>

@@ -1,4 +1,8 @@
-<app-post-hero title="currentPost.title"></app-post-hero>
+<!--<pre>{{currentPost$ | async | json}}</pre>-->
+
+<ng-container *ngIf="currentPost$ | async as currentPost">
+  <app-post-hero [post]="currentPost"></app-post-hero>
+</ng-container>
 
 <app-progress></app-progress>
 
