@@ -5,7 +5,11 @@
   "projects": {
     "patricklima": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -126,10 +130,5 @@
   "defaultProject": "patricklima",
   "cli": {
     "analytics": "81e4ec70-2dd1-4032-baf8-42ef2a652dbe"
-  },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
   }
 }
