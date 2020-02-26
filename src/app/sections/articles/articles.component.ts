@@ -2,7 +2,7 @@ import { Post } from './../../models/post.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-articles',
+  selector: 'dev-articles',
   templateUrl: './articles.component.html',
   styles: []
 })

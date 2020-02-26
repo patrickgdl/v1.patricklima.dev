@@ -1,8 +1,8 @@
 <div id="articlesList" class="articles-list-container show-details">
   <div class="post-row" *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd; let even = even">
-    <app-list-item [post]="rowPosts[0]" [narrow]="!even"></app-list-item>
-    <app-list-item [post]="rowPosts[1]" [narrow]="even"></app-list-item>
+    <dev-list-item [post]="rowPosts[0]" [narrow]="!even"></dev-list-item>
+    <dev-list-item [post]="rowPosts[1]" [narrow]="even"></dev-list-item>
   </div>
 </div>
 
-<app-paginator></app-paginator>
+<dev-paginator></dev-paginator>

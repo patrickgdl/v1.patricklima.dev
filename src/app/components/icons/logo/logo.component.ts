@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-logo',
+  selector: 'dev-logo',
   templateUrl: './logo.component.html',
   styles: []
 })

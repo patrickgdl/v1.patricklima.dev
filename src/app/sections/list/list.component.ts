@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Post } from './../../models/post.interface';
 
 @Component({
-  selector: 'app-list',
+  selector: 'dev-list',
   templateUrl: './list.component.html',
   styles: []
 })

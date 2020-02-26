@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-social-links',
+  selector: 'dev-social-links',
   templateUrl: './social-links.component.html',
   styleUrls: ['./social-links.component.scss']
 })

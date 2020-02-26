@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-paginator',
+  selector: 'dev-paginator',
   templateUrl: './paginator.component.html',
   styles: []
 })

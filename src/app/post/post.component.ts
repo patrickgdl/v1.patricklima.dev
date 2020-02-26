@@ -7,7 +7,7 @@ import { Post } from './../models/post.interface';
 import { Posts } from './../shared/posts';
 
 @Component({
-  selector: 'app-posts',
+  selector: 'dev-posts',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
   preserveWhitespaces: true,

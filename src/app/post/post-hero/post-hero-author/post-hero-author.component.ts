@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-author',
+  selector: 'dev-author',
   template: `
     <a [routerLink]="['./about']" class="article-author-link">
       <div class="article-author-avatar">

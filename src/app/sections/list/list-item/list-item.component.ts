@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Post } from 'src/app/models/post.interface';
 
 @Component({
-  selector: 'app-list-item',
+  selector: 'dev-list-item',
   template: `
     <ng-container *ngIf="post">
       <a [routerLink]="[post.route]" class="article-link">

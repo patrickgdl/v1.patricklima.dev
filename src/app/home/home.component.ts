@@ -6,7 +6,7 @@ import { Post } from './../models/post.interface';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-home',
+  selector: 'dev-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

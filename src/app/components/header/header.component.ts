@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './../../services/theme.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'dev-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

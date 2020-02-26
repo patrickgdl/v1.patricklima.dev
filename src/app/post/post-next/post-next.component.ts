@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-post-next',
+  selector: 'dev-post-next',
   templateUrl: './post-next.component.html',
   styles: []
 })

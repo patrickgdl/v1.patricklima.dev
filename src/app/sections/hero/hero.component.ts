@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'dev-hero',
   templateUrl: './hero.component.html',
   styles: []
 })
