@@ -1,10 +1,10 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Post } from './../models/post.interface';
-import { Posts } from './../shared/posts';
+import { Post } from './../../models/post.interface';
+import { Posts } from './../../shared/posts';
 
 @Component({
   selector: 'dev-posts',
@@ -22,7 +22,7 @@ export class PostComponent implements OnInit {
   articleNext: number;
   bottomOffset: number;
 
-  constructor(private _router: Router, private route: ActivatedRoute, private _posts: Posts) {}
+  constructor(private _router: Router, private _posts: Posts) {}
 
   ngOnInit() {
     this.progressBar = document.getElementById('progressBar');

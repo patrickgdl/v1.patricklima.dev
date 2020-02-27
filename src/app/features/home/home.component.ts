@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-
-import { Posts } from '../shared/posts';
-import { Post } from './../models/post.interface';
 import { map } from 'rxjs/operators';
+
+import { Post } from './../../models/post.interface';
+import { Posts } from './../../shared/posts';
 
 @Component({
   selector: 'dev-home',
