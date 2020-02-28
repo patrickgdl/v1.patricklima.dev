@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '@scullyio/ng-lib';
 
 import { SharedModule } from './../../shared/shared.module';
@@ -13,6 +11,6 @@ import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [PostComponent, PostHeroAuthorComponent, PostHeroComponent, PostNextComponent, ProgressComponent],
-  imports: [CommonModule, PostRoutingModule, RouterModule, SharedModule, ComponentsModule]
+  imports: [SharedModule, PostRoutingModule, SharedModule, ComponentsModule]
 })
 export class PostModule {}

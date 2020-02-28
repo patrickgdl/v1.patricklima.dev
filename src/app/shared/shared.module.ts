@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import { BioModule } from './components/bio/bio.module';
+import { BioComponent } from './components/bio/bio.component';
 import { RowsComponent } from './components/icons/rows/rows.component';
 import { TilesComponent } from './components/icons/tiles/tiles.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
@@ -9,9 +10,9 @@ import { SocialLinksComponent } from './components/social-links/social-links.com
 import { Posts } from './posts';
 
 @NgModule({
-  declarations: [TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent],
-  exports: [TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent, BioModule],
-  imports: [CommonModule],
+  declarations: [TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent, BioComponent],
+  exports: [CommonModule, RouterModule, TilesComponent, RowsComponent, PaginatorComponent, SocialLinksComponent, BioComponent],
+  imports: [CommonModule, RouterModule],
   providers: [
     {
       provide: Posts,
