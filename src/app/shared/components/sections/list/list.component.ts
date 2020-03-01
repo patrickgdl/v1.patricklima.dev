@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Post } from './../../../models/post.interface';
+import { Post } from '../../../../models/post.interface';
 
 @Component({
   selector: 'dev-list',
@@ -12,6 +12,5 @@ export class ListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
