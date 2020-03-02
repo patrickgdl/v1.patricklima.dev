@@ -21,11 +21,6 @@
   @media screen and (max-width: $tablet) {
     margin-bottom: 60px;
   }
-
-  /*PHABLET*/
-  @media screen and (max-width: $phablet) {
-    display: none;
-  }
 }
 
 .grid-controls-container {
@@ -44,6 +39,7 @@
 
 .heading-container {
   margin: 100px 0;
+  max-width: 392px;
 
   /*DESKTOP*/
   @media screen and (max-width: $desktop) {
@@ -58,7 +54,7 @@
 
 .hero-heading {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 52px;
   font-family: var(--sanserif);
   line-height: 1.15;
