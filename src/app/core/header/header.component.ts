@@ -76,21 +76,4 @@ export class HeaderComponent implements OnInit {
       localStorage.setItem('isLight', 'true');
     }
   }
-
-  onCopyToClipboard() {
-    const currentUrl = window.location;
-    const toolTip = document.getElementById('toolTip');
-    const copyTextContainer = document.getElementById('copyText') as HTMLInputElement;
-
-    copyTextContainer.value = currentUrl.href;
-    copyTextContainer.focus();
-    copyTextContainer.select();
-    document.execCommand('copy');
-
-    toolTip.style.animationName = 'pan-toolbar';
-
-    setTimeout(() => {
-      toolTip.style.removeProperty('animation-name');
-    }, 2000);
-  }
 }
