@@ -3,11 +3,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Post } from './../../../../models/post.interface';
 
 @Component({
-  selector: 'dev-articles',
-  templateUrl: './articles.component.html',
+  selector: 'dev-list',
+  templateUrl: './list.component.html',
   styles: []
 })
-export class ArticlesComponent implements OnInit {
+export class ListComponent implements OnInit {
   @Input() pairPosts: Post[][];
 
   constructor() {}
