@@ -7,12 +7,12 @@ import { Post } from '../../../../../models/post.interface';
   template: `
     <ng-container *ngIf="post">
       <a [routerLink]="[post.route]" class="article-link">
-        <div class="article-data-outer">
+        <div class="list-item-row">
           <div class="image-container">
             <img [src]="post.hero" class="article-image" />
           </div>
 
-          <div class="article-data">
+          <div>
             <h2 class="article-title">
               {{ post.title }}
             </h2>
@@ -28,7 +28,6 @@ import { Post } from '../../../../../models/post.interface';
 })
 export class ListItemComponent implements OnInit {
   @Input() post: Post;
-  @Input() narrow: boolean;
 
   constructor() {}
 

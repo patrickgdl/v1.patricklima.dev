@@ -5,21 +5,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './hero.component.html',
   styles: []
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent {
   @Output() clickedGrid = new EventEmitter();
   @Output() clickedRows = new EventEmitter();
+  isGridClicked = true;
 
   constructor() {}
 
-  ngOnInit() {
-    document.getElementById('rows').style.fill = 'var(--grey)';
-  }
-
   onClickGrid() {
     this.clickedGrid.emit();
+    this.isGridClicked = true;
   }
 
   onClickRows() {
     this.clickedRows.emit();
+    this.isGridClicked = false;
   }
 }

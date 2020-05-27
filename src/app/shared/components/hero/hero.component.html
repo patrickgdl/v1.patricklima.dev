@@ -1,7 +1,7 @@
 <section class="section">
   <div class="heading-container">
     <h1 class="hero-heading">
-      Olá, sou Patrick Lima.
+      Eu sou Patrick Lima.
     </h1>
 
     <p class="bio-text" style="margin-top: 32px;">
@@ -15,10 +15,10 @@
 
     <div class="grid-controls-container">
       <button class="grid-button" (click)="onClickGrid()">
-        <dev-tiles></dev-tiles>
+        <dev-tiles [fill]="isGridClicked ? 'var(--primary)' : 'var(--grey)'"></dev-tiles>
       </button>
       <button class="grid-button" (click)="onClickRows()">
-        <dev-rows></dev-rows>
+        <dev-rows [fill]="isGridClicked ? 'var(--grey)' : 'var(--primary)'"></dev-rows>
       </button>
     </div>
   </div>

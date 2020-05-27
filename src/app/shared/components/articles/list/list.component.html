@@ -1,7 +1,11 @@
-<div id="articlesList" class="articles-list-container show-details">
-  <div class="post-row" *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd; let even = even">
-    <dev-list-item [post]="rowPosts[0]" [narrow]="!even"></dev-list-item>
-    <dev-list-item [post]="rowPosts[1]" [narrow]="even"></dev-list-item>
+<div id="articlesList" class="articles-list-container">
+  <div
+    [class]="isList ? 'post-row' : 'post-grid'"
+    [ngStyle]="{ 'grid-template-columns': isList ? '' : odd ? wide : narrow }"
+    *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd"
+  >
+    <dev-list-item [post]="rowPosts[0]"></dev-list-item>
+    <dev-list-item [post]="rowPosts[1]"></dev-list-item>
   </div>
 </div>
 

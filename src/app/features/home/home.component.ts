@@ -54,15 +54,11 @@ export class HomeComponent implements OnInit {
 
   makeGrid() {
     document.getElementById('articlesList').classList.remove('articles-list-container-alt');
-    document.getElementById('tiles').style.fill = 'var(--primary)';
-    document.getElementById('rows').style.fill = 'var(--grey)';
     this.isList = false;
   }
 
   makeRows() {
     document.getElementById('articlesList').classList.add('articles-list-container-alt');
-    document.getElementById('rows').style.fill = 'var(--primary)';
-    document.getElementById('tiles').style.fill = 'var(--grey)';
     this.isList = true;
   }
 }

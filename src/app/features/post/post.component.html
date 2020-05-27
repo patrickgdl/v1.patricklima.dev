@@ -1,5 +1,5 @@
 <!--<pre>{{currentPost$ | async | json}}</pre>-->
-<section class="section narrow">
+<section class="section">
   <ng-container *ngIf="currentPost$ | async as currentPost">
     <dev-post-hero [post]="currentPost"></dev-post-hero>
   </ng-container>

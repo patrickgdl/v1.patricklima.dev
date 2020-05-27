@@ -9,6 +9,7 @@ import { Post } from './../../../models/post.interface';
 })
 export class ArticlesComponent implements OnInit {
   @Input() pairPosts: Post[][];
+  @Input() isList = false;
 
   constructor() {}
 
