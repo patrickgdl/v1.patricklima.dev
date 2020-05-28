@@ -39,7 +39,7 @@
 
 .heading-container {
   margin: 100px 0;
-  max-width: 392px;
+  max-width: 652px;
 
   /*DESKTOP*/
   @media screen and (max-width: $desktop) {
@@ -55,7 +55,7 @@
 .hero-heading {
   font-style: normal;
   font-weight: 600;
-  font-size: 52px;
+  font-size: 45px;
   font-family: var(--sanserif);
   line-height: 1.15;
   color: var(--primary);
