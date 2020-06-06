@@ -7,34 +7,32 @@ import { ListItemComponent } from './components/articles/list/list-item/list-ite
 import { ListComponent } from './components/articles/list/list.component';
 import { BioComponent } from './components/bio/bio.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { RowsComponent } from './components/icons/rows/rows.component';
-import { TilesComponent } from './components/icons/tiles/tiles.component';
+import { RowsComponent } from './components/hero/icons/rows.component';
+import { TilesComponent } from './components/hero/icons/tiles.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { SocialLinksModule } from './components/social-links/social-links.module';
 import { Posts } from './posts';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [TilesComponent, RowsComponent, PaginatorComponent, BioComponent, ListItemComponent, HeroComponent, ArticlesComponent, ListComponent],
+  declarations: [PaginatorComponent, BioComponent, ListItemComponent, HeroComponent, ArticlesComponent, ListComponent, TilesComponent, RowsComponent],
   exports: [
     /* Vendor */
     CommonModule,
     RouterModule,
     /* Components */
-    TilesComponent,
-    RowsComponent,
     SocialLinksModule,
     PaginatorComponent,
     BioComponent,
     HeroComponent,
     ArticlesComponent,
-    ListComponent
+    ListComponent,
   ],
   providers: [
     {
       provide: Posts,
-      useClass: Posts
-    }
-  ]
+      useClass: Posts,
+    },
+  ],
 })
 export class SharedModule {}

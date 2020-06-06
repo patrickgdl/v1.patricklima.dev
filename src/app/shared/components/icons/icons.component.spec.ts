@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InstagramComponent } from './instagram.component';
+import { IconsComponent } from './icons.component';
 
-describe('InstagramComponent', () => {
-  let component: InstagramComponent;
-  let fixture: ComponentFixture<InstagramComponent>;
+describe('IconsComponent', () => {
+  let component: IconsComponent;
+  let fixture: ComponentFixture<IconsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InstagramComponent ]
+      declarations: [ IconsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InstagramComponent);
+    fixture = TestBed.createComponent(IconsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

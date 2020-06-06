@@ -1,14 +1,12 @@
-import { TwitterComponent } from './twitter.component';
-import { LinkedinComponent } from './linkedin.component';
-import { StackoverflowComponent } from './stackoverflow.component';
-import { InstagramComponent } from './instagram.component';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { IconsModule } from './../icons/icons.module';
 import { SocialLinksComponent } from './social-links.component';
-import { GithubComponent } from './github.component';
 
 @NgModule({
-  declarations: [SocialLinksComponent, GithubComponent, InstagramComponent, StackoverflowComponent, LinkedinComponent, TwitterComponent],
+  imports: [CommonModule, IconsModule],
+  declarations: [SocialLinksComponent],
   exports: [SocialLinksComponent],
 })
 export class SocialLinksModule {}
