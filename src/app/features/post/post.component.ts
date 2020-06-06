@@ -76,12 +76,12 @@ export class PostComponent implements OnInit {
 
     if (percentScrolled > 100) {
       this.progressBar.style.animationName = 'progress-fade-out';
-      setTimeout(function () {
+      setTimeout(() => {
         this.progressBar.style.opacity = '0';
       }, 500);
     } else {
       this.progressBar.style.animationName = 'progress-fade-in';
-      setTimeout(function () {
+      setTimeout(() => {
         this.progressBar.style.opacity = '1';
       }, 500);
     }
