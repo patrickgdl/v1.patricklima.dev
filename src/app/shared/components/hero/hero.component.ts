@@ -2,8 +2,28 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'dev-hero',
-  templateUrl: './hero.component.html',
-  styles: []
+  template: `
+    <section class="section">
+      <div class="heading-container">
+        <h1 class="hero-heading">
+          Oi! Sou Patrick Lima - um desenvolvedor de sistemas que trabalha na interação entre pessoas e software.
+        </h1>
+      </div>
+      <div class="subheading-container">
+        <dev-bio></dev-bio>
+
+        <div class="grid-controls-container">
+          <button class="grid-button" (click)="onClickGrid()">
+            <dev-tiles [fill]="isGridClicked ? 'var(--primary)' : 'var(--grey)'"></dev-tiles>
+          </button>
+          <button class="grid-button" (click)="onClickRows()">
+            <dev-rows [fill]="isGridClicked ? 'var(--grey)' : 'var(--primary)'"></dev-rows>
+          </button>
+        </div>
+      </div>
+    </section>
+  `,
+  styles: [],
 })
 export class HeroComponent {
   @Output() clickedGrid = new EventEmitter();

@@ -8,10 +8,25 @@ import { Posts } from './../../shared/posts';
 
 @Component({
   selector: 'dev-posts',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  template: `
+    <!--<pre>{{currentPost$ | async | json}}</pre>-->
+    <section class="section">
+      <ng-container *ngIf="currentPost$ | async as currentPost">
+        <dev-post-hero [post]="currentPost"></dev-post-hero>
+      </ng-container>
+
+      <dev-progress></dev-progress>
+
+      <article id="articleContent" class="post-content">
+        <scully-content></scully-content>
+      </article>
+
+      <dev-post-next></dev-post-next>
+    </section>
+  `,
+  styles: ['::slotted(h1) {color:rgb(51, 6, 37); background-color: rgb(248, 211, 236); padding: 5px; border-radius: 5px; width: fit-content;}'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class PostComponent implements OnInit {
   currentPost$: Observable<Post>;
@@ -45,7 +60,7 @@ export class PostComponent implements OnInit {
     this.bottomOffset = ((this.articleSubscription + this.articleNext + footerSection + 250) / document.body.scrollHeight) * 100;
     this.bottomOffset += this.bottomOffset * 1.1;
 
-    this.currentPost$ = this._posts.posts$.pipe(map(posts => posts.filter(e => e.route === this._router.routerState.snapshot.url).pop()));
+    this.currentPost$ = this._posts.posts$.pipe(map((posts) => posts.filter((e) => e.route === this._router.routerState.snapshot.url).pop()));
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -61,12 +76,12 @@ export class PostComponent implements OnInit {
 
     if (percentScrolled > 100) {
       this.progressBar.style.animationName = 'progress-fade-out';
-      setTimeout(function() {
+      setTimeout(function () {
         this.progressBar.style.opacity = '0';
       }, 500);
     } else {
       this.progressBar.style.animationName = 'progress-fade-in';
-      setTimeout(function() {
+      setTimeout(function () {
         this.progressBar.style.opacity = '1';
       }, 500);
     }

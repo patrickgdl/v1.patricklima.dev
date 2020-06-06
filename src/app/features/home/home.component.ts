@@ -7,8 +7,11 @@ import { Posts } from './../../shared/posts';
 
 @Component({
   selector: 'dev-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  template: `
+    <dev-hero (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-hero>
+
+    <dev-articles [pairPosts]="pairPosts$ | async" [isList]="isList"></dev-articles>
+  `,
 })
 export class HomeComponent implements OnInit {
   pairPosts$: Observable<Post[][]>;
@@ -25,7 +28,7 @@ export class HomeComponent implements OnInit {
      * This makes it simpler to create the grid
      */
     this.pairPosts$ = this._posts.posts$.pipe(
-      map(posts => {
+      map((posts) => {
         return posts.reduce((result, value, index, array) => {
           if (index % 2 === 0) {
             result.push(array.slice(index, index + 2));

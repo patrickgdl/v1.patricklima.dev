@@ -2,8 +2,22 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dev-progress',
-  templateUrl: './progress.component.html',
-  styles: []
+  template: `
+    <aside id="progressBar" class="aside-container">
+      <div class="aside-align">
+        <div>
+          <div class="overlap-container"></div>
+        </div>
+      </div>
+
+      <div class="progress-container" tabIndex="{-1}">
+        <div class="track-line" aria-hidden="true">
+          <div id="progressIndicator" class="progress-line"></div>
+        </div>
+      </div>
+    </aside>
+  `,
+  styles: [],
 })
 export class ProgressComponent implements OnInit {
   progressBar: HTMLElement;
@@ -13,7 +27,7 @@ export class ProgressComponent implements OnInit {
   articleNext: number;
   bottomOffset: number;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.progressBar = document.getElementById('progressBar');
@@ -46,15 +60,14 @@ export class ProgressComponent implements OnInit {
 
     if (percentScrolled > 100) {
       this.progressBar.style.animationName = 'progress-fade-out';
-      setTimeout(function() {
+      setTimeout(function () {
         this.progressBar.style.opacity = '0';
       }, 500);
     } else {
       this.progressBar.style.animationName = 'progress-fade-in';
-      setTimeout(function() {
+      setTimeout(function () {
         this.progressBar.style.opacity = '1';
       }, 500);
     }
   }
-
 }

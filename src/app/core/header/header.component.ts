@@ -4,8 +4,24 @@ import { ThemeService } from './../../services/theme.service';
 
 @Component({
   selector: 'dev-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  template: `
+    <section class="section">
+      <div class="nav-container">
+        <a class="logo-link" [routerLink]="['./']">
+          <dev-logo></dev-logo>
+
+          <span class="header-hidden">Navegue para a homepage</span>
+        </a>
+        <div class="nav-controls">
+          <button class="icon-wrapper" (click)="toggleColors()">
+            <div id="sunRays" class="sun-rays"></div>
+            <div id="moonOrSun" class="moon-or-sun"></div>
+            <div id="moonMask" class="moon-mask"></div>
+          </button>
+        </div>
+      </div>
+    </section>
+  `,
 })
 export class HeaderComponent implements OnInit {
   moonIcon: HTMLElement;
