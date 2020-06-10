@@ -7,6 +7,6 @@ exports.config = {
       slug: {
         folder: './posts'
       }
-    },
+    }
   }
 };

@@ -11,6 +11,6 @@ import { LogoComponent } from './logo/logo.component';
 @NgModule({
   declarations: [HeaderComponent, LogoComponent, LinkComponent, FooterComponent],
   exports: [HeaderComponent, LogoComponent, LinkComponent, FooterComponent],
-  imports: [BrowserModule, SocialLinksModule, RouterModule]
+  imports: [BrowserModule, RouterModule, SocialLinksModule],
 })
 export class CoreModule {}

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Post } from './../../models/post.interface';
-import { Posts } from './../../shared/posts';
+import { Posts } from '../../shared/components/articles/posts';
 
 @Component({
   selector: 'dev-home',
