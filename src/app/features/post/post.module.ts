@@ -12,6 +12,6 @@ import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [PostComponent, PostHeroAuthorComponent, PostHeroComponent, PostNextComponent, ProgressComponent],
-  imports: [CommonModule, RouterModule, PostRoutingModule, ScullyLibModule],
+  imports: [CommonModule, RouterModule, PostRoutingModule, ScullyLibModule]
 })
 export class PostModule {}

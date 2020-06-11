@@ -139,12 +139,6 @@
   }
 }
 
-.articles-list-container {
-  -webkit-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s;
-}
-
 .author-alc {
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--card)), to(var(--background-color)));
   background-image: -o-linear-gradient(var(--card), var(--background-color));

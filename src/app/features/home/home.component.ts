@@ -1,9 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Post } from './../../models/post.interface';
-import { Posts } from '../../shared/components/articles/posts';
+import { Posts } from '../../posts';
 
 @Component({
   selector: 'dev-home',
@@ -16,8 +16,6 @@ import { Posts } from '../../shared/components/articles/posts';
 export class HomeComponent implements OnInit {
   pairPosts$: Observable<Post[][]>;
   isList = false;
-  listRemoveWidth: MediaQueryList;
-  listAddWidth: MediaQueryList;
 
   constructor(private _posts: Posts) {}
 
@@ -37,31 +35,13 @@ export class HomeComponent implements OnInit {
         }, []);
       })
     );
-
-    this.listRemoveWidth = window.matchMedia('(max-width: 735px)');
-    this.listAddWidth = window.matchMedia('(min-width: 735px)');
-  }
-
-  @HostListener('window:resize', ['$event'])
-  resize(event: any) {
-    this.adjustListAtMobile();
-  }
-
-  adjustListAtMobile() {
-    if (this.listRemoveWidth.matches) {
-      document.getElementById('articlesList').classList.remove('articles-list-container-alt');
-    } else if (this.listAddWidth.matches && this.isList) {
-      document.getElementById('articlesList').classList.add('articles-list-container-alt');
-    }
   }
 
   makeGrid() {
-    document.getElementById('articlesList').classList.remove('articles-list-container-alt');
     this.isList = false;
   }
 
   makeRows() {
-    document.getElementById('articlesList').classList.add('articles-list-container-alt');
     this.isList = true;
   }
 }

@@ -3,16 +3,16 @@ import { Component, Input } from '@angular/core';
 import { Post } from './../../../../models/post.interface';
 
 @Component({
-  selector: 'dev-list',
+  selector: 'dev-articles-list',
   template: `
-    <div id="articlesList" class="articles-list-container">
+    <div [style.transition]="'opacity .25s'">
       <div
         [class]="isList ? 'post-row' : 'post-grid'"
         [ngStyle]="{ 'grid-template-columns': isList ? '' : odd ? wide : narrow }"
         *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd"
       >
-        <dev-list-item [post]="rowPosts[0]"></dev-list-item>
-        <dev-list-item [post]="rowPosts[1]"></dev-list-item>
+        <dev-articles-list-item [post]="rowPosts[0]"></dev-articles-list-item>
+        <dev-articles-list-item [post]="rowPosts[1]"></dev-articles-list-item>
       </div>
     </div>
 
@@ -20,7 +20,7 @@ import { Post } from './../../../../models/post.interface';
   `,
   styles: [],
 })
-export class ListComponent {
+export class ArticlesListComponent {
   @Input() pairPosts: Post[][];
   @Input() isList = false;
 

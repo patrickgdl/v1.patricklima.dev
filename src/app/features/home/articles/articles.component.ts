@@ -6,7 +6,7 @@ import { Post } from './../../../models/post.interface';
   selector: 'dev-articles',
   template: `
     <section class="section">
-      <dev-list [pairPosts]="pairPosts" [isList]="isList"></dev-list>
+      <dev-articles-list [pairPosts]="pairPosts" [isList]="isList"></dev-articles-list>
 
       <div class="articles-paginator"></div>
     </section>

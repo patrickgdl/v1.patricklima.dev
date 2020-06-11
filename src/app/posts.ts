@@ -3,7 +3,7 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Post } from '../../../models/post.interface';
+import { Post } from './models/post.interface';
 
 const dateRegex = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
 

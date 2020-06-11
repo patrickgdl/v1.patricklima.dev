@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../../../../../models/post.interface';
 
 @Component({
-  selector: 'dev-list-item',
+  selector: 'dev-articles-list-item',
   template: `
     <ng-container *ngIf="post">
       <a [routerLink]="[post.route]" class="article-link">
@@ -26,7 +26,7 @@ import { Post } from '../../../../../models/post.interface';
     </ng-container>
   `
 })
-export class ListItemComponent implements OnInit {
+export class ArticlesListItemComponent implements OnInit {
   @Input() post: Post;
 
   constructor() {}

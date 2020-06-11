@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'dev-progress',
   template: `
-    <aside id="progressBar" class="aside-container">
+    <aside #progressBar class="aside-container">
       <div class="aside-align">
         <div>
           <div class="overlap-container"></div>
         </div>
       </div>
-
       <div class="progress-container" tabIndex="{-1}">
         <div class="track-line" aria-hidden="true">
-          <div id="progressIndicator" class="progress-line"></div>
+          <div #progressIndicator class="progress-line"></div>
         </div>
       </div>
     </aside>
@@ -20,25 +19,19 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class ProgressComponent implements OnInit {
-  progressBar: HTMLElement;
-  scrollProgress: HTMLElement;
+  @ViewChild('progressBar', { static: true }) progressBar: ElementRef;
+  @ViewChild('progressIndicator', { static: true }) scrollProgress: ElementRef;
+  progressBarEl: HTMLElement;
+  scrollProgressEl: HTMLElement;
 
-  articleSubscription: number;
   articleNext: number;
   bottomOffset: number;
 
   constructor() {}
 
   ngOnInit() {
-    this.progressBar = document.getElementById('progressBar');
-
-    this.scrollProgress = document.getElementById('progressIndicator');
-
-    if (document.getElementById('subscriptionSection')) {
-      this.articleSubscription = document.getElementById('subscriptionSection').offsetHeight;
-    } else {
-      this.articleSubscription = 0;
-    }
+    this.progressBarEl = this.progressBar.nativeElement;
+    this.scrollProgressEl = this.scrollProgress.nativeElement;
 
     if (document.getElementById('articleNext')) {
       this.articleNext = document.getElementById('articleNext').offsetHeight;
@@ -48,25 +41,30 @@ export class ProgressComponent implements OnInit {
 
     const footerSection = 150;
 
-    this.bottomOffset = ((this.articleSubscription + this.articleNext + footerSection + 250) / document.body.scrollHeight) * 100;
+    this.bottomOffset = ((this.articleNext + footerSection + 250) / document.body.scrollHeight) * 100;
     this.bottomOffset += this.bottomOffset * 1.1;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  scroll(event: any) {
+    this.updateProgress();
   }
 
   updateProgress() {
     const percentScrolled = (window.pageYOffset / document.body.scrollHeight) * (100 + this.bottomOffset);
 
     const transformation = 'translateY(' + percentScrolled + '%)';
-    this.scrollProgress.style.transform = transformation;
+    this.scrollProgressEl.style.transform = transformation;
 
     if (percentScrolled > 100) {
-      this.progressBar.style.animationName = 'progress-fade-out';
-      setTimeout(function () {
-        this.progressBar.style.opacity = '0';
+      this.progressBarEl.style.animationName = 'progress-fade-out';
+      setTimeout(() => {
+        this.progressBarEl.style.opacity = '0';
       }, 500);
     } else {
-      this.progressBar.style.animationName = 'progress-fade-in';
-      setTimeout(function () {
-        this.progressBar.style.opacity = '1';
+      this.progressBarEl.style.animationName = 'progress-fade-in';
+      setTimeout(() => {
+        this.progressBarEl.style.opacity = '1';
       }, 500);
     }
   }

@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'dev-about-articles',
   template: `
-    <section class="section nartrow author-alc-section">
-      <div id="articlesList" class="articles-list-container author-alc">
+    <section class="section author-alc-section">
+      <div class="author-alc">
         <div class="post-row-alt">
           <a href="" class="article-link">
             <div class="list-item-row">
@@ -30,8 +30,6 @@ import { Component, OnInit } from '@angular/core';
 
       <dev-paginator></dev-paginator>
     </section>
-
-    <!-- {{ $script := resources.Get "js/toggleBorder.js" }} -->
   `,
 })
 export class AboutArticlesComponent implements OnInit {
