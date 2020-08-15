@@ -5,7 +5,7 @@ import { ThemeService } from './../../services/theme.service';
 @Component({
   selector: 'dev-header',
   template: `
-    <section class="section">
+    <header class="section">
       <div class="nav-container">
         <a class="logo-link" [routerLink]="['./']">
           <dev-logo></dev-logo>
@@ -35,7 +35,7 @@ import { ThemeService } from './../../services/theme.service';
           </button>
         </div>
       </div>
-    </section>
+    </header>
   `,
 })
 export class HeaderComponent implements OnInit {
