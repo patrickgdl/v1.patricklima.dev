@@ -9,7 +9,6 @@ import { Post } from './../../models/post.interface';
 @Component({
   selector: 'dev-posts',
   template: `
-    <!--<pre>{{currentPost$ | async | json}}</pre>-->
     <div class="wrapper">
       <ng-container *ngIf="currentPost$ | async as currentPost">
         <dev-post-hero [post]="currentPost"></dev-post-hero>
@@ -26,7 +25,6 @@ import { Post } from './../../models/post.interface';
   `,
   styles: [
     `
-      /*! CSS Used from: Embedded */
       header {
         border-bottom: 1px solid var(--divider);
         position: relative;
@@ -44,7 +42,7 @@ import { Post } from './../../models/post.interface';
 
       @media (max-width: 768px) {
         .wrapper {
-          min-height: calc(100vh - 50px);
+          min-height: calc(100vh - 70px);
           background: linear-gradient(rgb(25, 28, 34), rgb(8, 8, 11) 3%);
         }
       }

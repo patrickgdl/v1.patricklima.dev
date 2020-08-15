@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
         <h1 class="author-heading">Patrick Lima</h1>
         <p class="author-subheading">
           Sou desenvolvedor de software e atualmente trabalho como analista na
-          <a href="https://www.corbion.com/" target="_blank" rel="noopener">Corbion</a>. Eu principalmente desenvolvo front-end e sou um fã de Angular e CSS.
-          Tento compartilhar tudo que aprendo aqui. Também sou aspirante a cientista de dados e interessado na área.
+          <a href="https://www.corbion.com/" target="_blank" rel="noopener">Corbion</a>. Eu principalmente desenvolvo front-end com Angular e CSS. Aprendendo
+          Python para Data Science e Machine Learning.
         </p>
         <div class="author-social">
           <div class="social-icon-outer authors-sio">
