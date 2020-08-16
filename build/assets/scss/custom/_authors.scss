@@ -34,7 +34,7 @@
     img{
         width: 100%;
     }
-  
+
     /*TABLET*/
     @media screen and (max-width: $tablet){
         width: 146px;
@@ -69,7 +69,7 @@
 
     /*PHABLET*/
     @media screen and (max-width: $phablet){
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
@@ -85,10 +85,10 @@
             justify-content: center;
     margin-top: 35px;
     width: 100%;
-  
+
     /*PHABLET*/
     @media screen and (max-width: $phablet){
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 

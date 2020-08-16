@@ -109,35 +109,27 @@
 .nav-container {
   position: relative;
   z-index: 100;
-  padding-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100px;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 @media screen and (max-height: 800px) {
   .nav-container {
-    padding-top: 50px;
+    height: 50px;
   }
 }
 
 /*DESKTOP MEDIUM*/
 @media screen and (max-width: 1280px) {
   .nav-container {
-    padding-top: 50px;
+    height: 50px;
   }
 }
 
 .logo-link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -195,7 +187,7 @@
   position: absolute;
   padding: 4px 13px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   top: -35px;
   color: var(--primary);
   background-color: var(--tooltip);
