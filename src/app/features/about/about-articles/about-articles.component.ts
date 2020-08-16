@@ -1,37 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Post } from 'src/app/models/post.interface';
+import { Posts } from 'src/app/posts';
 
 @Component({
   selector: 'dev-about-articles',
   template: `
     <section class="section author-alc-section">
       <div class="author-alc">
-        <div class="post-row-alt">
-          <a href="" class="article-link" >
-            <div class="list-item-row">
-              <div class="image-container">
-                <img src="" class="article-image" />
-              </div>
-              <div>
-                <h2 class="article-title">
-                  Titulo do post
-                </h2>
-                <p class="article-excerpt">
-                  Descrição do post
-                </p>
-                <div class="article-metadata">
-                  2 de Janeiro de 2006 • 6 min leitura
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="" style="opacity: 0;" class="article-link"> </a>
-        </div>
+        <!-- <div class="post-row-alt">
+        </div> -->
+
+        <dev-articles [pairPosts]="pairPosts$ | async" [isList]="true"></dev-articles>
       </div>
     </section>
   `,
 })
 export class AboutArticlesComponent implements OnInit {
-  constructor() {}
+  pairPosts$: Observable<Post[][]>;
 
-  ngOnInit() {}
+  constructor(private _posts: Posts) {}
+
+  ngOnInit() {
+    this.pairPosts$ = this._posts.posts$.pipe(
+      map((posts) => {
+        // TODO: order by date and show only published
+        const pair = posts.reduce((result, value, index, array) => {
+          if (index % 2 === 0) {
+            result.push(array.slice(index, index + 2));
+          }
+          return result;
+        }, []);
+        return pair;
+      })
+    );
+  }
 }

@@ -7,8 +7,6 @@ import { Post } from './../../../models/post.interface';
   template: `
     <section class="section">
       <dev-articles-list [pairPosts]="pairPosts" [isList]="isList"></dev-articles-list>
-
-      <div class="articles-paginator"></div>
     </section>
 
     <div class="articles-gradient"></div>

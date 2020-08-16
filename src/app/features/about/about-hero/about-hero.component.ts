@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
           Python para Data Science e Machine Learning.
         </p>
         <div class="author-social">
-          <div class="social-icon-outer authors-sio">
+          <div class="social-icon-outer">
             <div class="social-icon-container">
               <dev-social-links></dev-social-links>
             </div>

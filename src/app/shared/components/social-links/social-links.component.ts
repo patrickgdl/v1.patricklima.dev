@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
         <a [href]="icon.link" target="_blank" rel="noopener noreferrer" *ngFor="let icon of iconsList">
           <dev-icons [name]="icon.name"></dev-icons>
         </a>
-        <span class="hidden"></span>
       </div>
     </div>
   `,

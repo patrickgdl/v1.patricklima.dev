@@ -17,8 +17,6 @@ import { Post } from './../../../../models/post.interface';
         </div>
       </ng-container>
     </div>
-
-    <dev-paginator></dev-paginator>
   `,
   styles: [],
 })
