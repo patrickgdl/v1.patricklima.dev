@@ -14,7 +14,7 @@
           -o-transition: var(--color-mode-transition);
           transition: var(--color-mode-transition);
         }
-    
+
         &::after {
           content: "";
           width: 100%;
@@ -50,7 +50,7 @@
     margin:100px auto 120px;
     padding-left: 68px;
     max-width: 749px;
-  
+
     @media screen and (max-width: $desktop){
         padding-left: 53px;
         max-width: calc(507px + 53px);
@@ -67,7 +67,7 @@
         margin: 170px auto 180px;
         padding: 0 40px;
     }
-  
+
     @media screen and (max-height: 700px) {
       margin: 100px auto;
     }
@@ -79,7 +79,7 @@
     margin-bottom: 25px;
     font-weight: bold;
     line-height: 1.32;
-  
+
     @media screen and (max-width: $tablet){
         margin-bottom: 20px;
         font-size: 36px;
@@ -107,9 +107,9 @@
         border: 1px solid var(--horizontalRule);
         border-radius: 5px;
     }
-  
+
     @media screen and(max-width: $phablet){
-        font-size: 14px;
+        font-size: 0.875rem;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -155,7 +155,7 @@
     @media screen and (max-width: $desktop_medium){
         position: relative;
     }
-  
+
     /*TABLET*/
     @media screen and (max-width: $tablet){
         max-width: 100%;
@@ -166,7 +166,7 @@
         margin: 0 auto;
         width: calc(100vw - 40px);
         height: 220px;
-    
+
         & > div {
           height: 220px;
         }
@@ -189,13 +189,13 @@
     &:visited{
         color: inherit;
     }
-  
+
     strong {
       -webkit-transition: var(--color-mode-transition);
       -o-transition: var(--color-mode-transition);
       transition: var(--color-mode-transition);
     }
-  
+
     &:hover strong {
       color: var(--primary);
     }
@@ -205,18 +205,18 @@
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    margin-right: 14px;
+    margin-right: 0.875rem;
     background: var(--grey);
     overflow: hidden;
 
     img{
         width: 100%;
     }
-  
+
     .gatsby-image-wrapper > div {
       padding-bottom: 100% !important;
     }
-  
+
     /*PHABLET*/
     @media screen and (max-width: $phablet){
         display: none;
@@ -242,7 +242,7 @@
     font-size: 18px;
     color: var(--grey);
     cursor: pointer;
-  
+
     &::before {
       content: "";
       position: absolute;
@@ -261,26 +261,26 @@
       cursor: pointer;
       opacity: 0;
     }
-  
+
     &:hover::before {
       opacity: 1;
     }
 
     /*PHABLET*/
     @media screen and (max-width: $phablet){
-        font-size: 14px;
+        font-size: 0.875rem;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-    
+
         &::before {
           -webkit-box-shadow: none;
                   box-shadow: none;
           bottom: -30px;
           background: transparent;
         }
-    
-    
+
+
         strong {
           display: block;
           font-weight: semi-bold;
@@ -323,11 +323,11 @@
     transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
     overflow: hidden;
     pointer-events: none;
-  
+
     img{
         width: 100%;
     }
-  
+
     /*PHABLET*/
     @media screen and (max-width: $phablet){
         display: none;
@@ -343,12 +343,12 @@
        text-overflow: ellipsis;
     font-weight: 600;
     cursor: pointer;
-  
+
     /*DESKTOP*/
     @media screen and (max-width: $desktop){
         max-width: 120px;
     }
-    
+
     /*PHABLET*/
     @media screen and (max-width: $phablet){
         max-width: 200px;
@@ -366,7 +366,7 @@
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-  
+
     /*PHABLET*/
     @media screen and (max-width: $phablet){
         position: absolute;
@@ -414,7 +414,7 @@
     a {
         width: 100%;
     }
-    
+
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -432,7 +432,7 @@
     img{
         width: 100%;
     }
-  
+
     .gatsby-image-wrapper > div {
       padding-bottom: 100% !important;
       overflow: hidden;
@@ -465,12 +465,12 @@
     min-width: 100%;
     font-weight: 400;
     color: var(--primary);
-  
+
     /*TABLET*/
     @media screen and (max-width: $tablet){
         margin-bottom: 60px;
     }
-  
+
     &::after {
         content: '';
         position: absolute;

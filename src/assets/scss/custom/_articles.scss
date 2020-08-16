@@ -54,10 +54,10 @@
 
 .hero-heading {
   font-style: normal;
-  font-weight: 600;
-  font-size: 45px;
+  font-weight: 500;
+  font-size: 3.25rem;
   font-family: var(--sanserif);
-  line-height: 1.15;
+  line-height: 1.5;
   color: var(--primary);
   margin: 0;
 
@@ -231,20 +231,15 @@
 
 .image-container {
   position: relative;
-  height: 280px;
   box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.3), 0 18px 36px -18px rgba(0, 0, 0, 0.33);
   margin-bottom: 30px;
+  min-height: 280px;
   -webkit-transition: -webkit-transform 0.3s var(--ease-out-quad), box-shadow 0.3s var(--ease-out-quad);
   -webkit-transition: transform 0.3s var(--ease-out-quad), box-shadow 0.3s var(--ease-out-quad);
   transition: transform 0.3s var(--ease-out-quad), box-shadow 0.3s var(--ease-out-quad);
 
-  & > div {
-    height: 100%;
-  }
-
-  /*TABLET*/
   @media screen and (max-width: $tablet) {
-    height: 200px;
+    min-height: 200px;
     margin-bottom: 35px;
   }
 
@@ -263,9 +258,15 @@
   -ms-flex-negative: 0;
   flex-shrink: 0;
   max-width: 100%;
-  min-height: 100%;
+  max-height: 280px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+
+  /*TABLET*/
+  @media screen and (max-width: $tablet) {
+    max-height: 200px;
+  }
 }
 
 .article-title {
@@ -323,7 +324,7 @@
   }
 
   /*PHABLET*/
-  @media screem and (max-width: $phablet) {
+  @media screen and (max-width: $phablet) {
     margin-bottom: 15px;
     max-width: 100%;
     padding: 0 20px;
@@ -333,10 +334,9 @@
 }
 
 .article-metadata {
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
   color: var(--grey);
-  opacity: 0.33;
+  opacity: 0.40;
 
   /*PHABLET*/
   @media screen and (max-width: $phablet) {

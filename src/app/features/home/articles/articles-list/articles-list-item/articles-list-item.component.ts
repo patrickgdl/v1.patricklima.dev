@@ -9,7 +9,7 @@ import { Post } from '../../../../../models/post.interface';
       <a [routerLink]="[post.route]" class="article-link">
         <div class="list-item-row">
           <div class="image-container">
-            <img [src]="post.hero" class="article-image" />
+            <img [src]="post.hero" class="article-image" [style.minWidth.%]="numberOfPosts == 1 ? '100' : ''"/>
           </div>
 
           <div>
@@ -28,6 +28,7 @@ import { Post } from '../../../../../models/post.interface';
 })
 export class ArticlesListItemComponent implements OnInit {
   @Input() post: Post;
+  @Input() numberOfPosts: number;
 
   constructor() {}
 

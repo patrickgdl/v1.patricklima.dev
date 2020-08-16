@@ -27,12 +27,14 @@ export class HomeComponent implements OnInit {
      */
     this.pairPosts$ = this._posts.posts$.pipe(
       map((posts) => {
-        return posts.reduce((result, value, index, array) => {
+        // TODO: order by date and show only published
+        const pair = posts.reduce((result, value, index, array) => {
           if (index % 2 === 0) {
             result.push(array.slice(index, index + 2));
           }
           return result;
         }, []);
+        return pair;
       })
     );
   }

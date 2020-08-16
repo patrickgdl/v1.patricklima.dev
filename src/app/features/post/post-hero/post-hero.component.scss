@@ -15,7 +15,6 @@ h1 {
   text-transform: none;
   margin-bottom: 1rem;
   font-size: 48px;
-  color: rgb(0, 0, 0);
   font-family: var(--serif);
   font-weight: 700;
 }
@@ -71,7 +70,7 @@ h1 {
 
 .post-author {
   font-size: 1.25rem;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--grey);
 }
 
 .post-time {

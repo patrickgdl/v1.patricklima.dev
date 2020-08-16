@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <section class="section author-alc-section">
       <div class="author-alc">
         <div class="post-row-alt">
-          <a href="" class="article-link">
+          <a href="" class="article-link" >
             <div class="list-item-row">
               <div class="image-container">
                 <img src="" class="article-image" />
@@ -27,8 +27,6 @@ import { Component, OnInit } from '@angular/core';
           <a href="" style="opacity: 0;" class="article-link"> </a>
         </div>
       </div>
-
-      <dev-paginator></dev-paginator>
     </section>
   `,
 })

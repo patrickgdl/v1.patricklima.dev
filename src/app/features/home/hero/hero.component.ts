@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
     <section class="section">
       <div class="heading-container">
         <h1 class="hero-heading">
-          Oi! Sou Patrick Lima - um desenvolvedor de sistemas que trabalha na interação entre pessoas e software.
+          Oi! Sou Patrick Lima - Designer & Desenvolvedor de Software.
         </h1>
       </div>
       <div class="subheading-container">

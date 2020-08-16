@@ -6,14 +6,16 @@ import { Post } from './../../../../models/post.interface';
   selector: 'dev-articles-list',
   template: `
     <div [style.transition]="'opacity .25s'">
-      <div
-        [class]="isList ? 'post-row' : 'post-grid'"
-        [ngStyle]="{ 'grid-template-columns': isList ? '' : odd ? wide : narrow }"
-        *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd"
-      >
-        <dev-articles-list-item [post]="rowPosts[0]"></dev-articles-list-item>
-        <dev-articles-list-item [post]="rowPosts[1]"></dev-articles-list-item>
-      </div>
+      <ng-container *ngIf="pairPosts?.length">
+        <div
+          [class]="isList ? 'post-row' : 'post-grid'"
+          [ngStyle]="pairPosts.length === 1 ? { 'grid-template-rows': '1fr' } : { 'grid-template-columns': isList ? '' : odd ? wide : narrow }"
+          *ngFor="let rowPosts of pairPosts; let idx = index; let odd = odd"
+        >
+          <dev-articles-list-item [post]="rowPosts[0]" [numberOfPosts]="pairPosts?.length"></dev-articles-list-item>
+          <dev-articles-list-item [post]="rowPosts[1]"></dev-articles-list-item>
+        </div>
+      </ng-container>
     </div>
 
     <dev-paginator></dev-paginator>
@@ -21,7 +23,7 @@ import { Post } from './../../../../models/post.interface';
   styles: [],
 })
 export class ArticlesListComponent {
-  @Input() pairPosts: Post[][];
+  @Input() pairPosts: Post[][] = [];
   @Input() isList = false;
 
   narrow = '1fr 457px';
@@ -31,5 +33,7 @@ export class ArticlesListComponent {
   //   display: grid;
   //   grid-template-rows: hasOnlyOneArticle ? '1fr' : '1fr 1fr';
 
-  constructor() {}
+  constructor() {
+    const iashdu = this.pairPosts.length === 1 ? 'grid-template-rows' : 'grid-template-columns';
+  }
 }

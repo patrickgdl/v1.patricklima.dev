@@ -11,9 +11,7 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
         <p class="bio-text">
-          Atualmente trabalho como analista na
-          <a href="https://www.corbion.com/" target="_blank" rel="noopener">Corbion</a>. Eu desenvolvo principalmente front-end com Angular e CSS. Aprendendo
-          Python para Data Science e Machine Learning.
+          De Araucária, Paraná - Brasil. Angular e CSS. Aprendendo Python para Data Science e Machine Learning.
         </p>
       </a>
     </div>

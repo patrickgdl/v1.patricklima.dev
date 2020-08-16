@@ -7,7 +7,7 @@ import { Post } from './../../../models/post.interface';
   template: `
     <div class="post-hero">
       <section class="post-hero-section">
-        <header class="post-header" style="transform: translateY(41.23px); opacity: 0.4854;">
+        <header class="post-header">
           <h1>{{ post.title }}</h1>
           <div class="post-author">por Patrick Lima</div>
         </header>
