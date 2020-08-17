@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'dev-logo',
   template: `
-    <svg width="190" height="35" viewBox="0 0 190 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 190 35" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="17.5" cy="17.5" r="17.5" fill="white" />
       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1979 19.1783L7.08861 20.7278L17.5065 26.2607L17.5204 22.5709L11.1979 19.1783Z" fill="black" />
       <path d="M17.5065 15.8701V12.4051L7.08861 17.645L11.1979 19.1783L17.5065 15.8701Z" fill="#BFBFBF" />
@@ -18,6 +18,20 @@ import { Component, OnInit, Input } from '@angular/core';
       />
     </svg>
   `,
+  styles: [
+    `
+      svg {
+        width: 190px;
+        height: 35px;
+      }
+
+      @media screen and (max-width: 735px) {
+        svg {
+          width: 140px;
+        }
+      }
+    `,
+  ],
 })
 export class LogoComponent implements OnInit {
   @Input() onlyIcon = false;

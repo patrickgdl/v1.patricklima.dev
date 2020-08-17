@@ -194,6 +194,7 @@
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   margin-left: 30px;
+  font-size: 0.875rem;
 }
 
 .icon-wrapper:hover {
@@ -225,6 +226,24 @@
   }
   .icon-wrapper:hover {
     opacity: 0.5;
+  }
+}
+
+.button-copy {
+  width: 115px;
+  border-radius: 0;
+  border: 1px dashed var(--grey);
+  padding: 0.25rem;
+  color: var(--primary)
+}
+
+.button-copy:hover {
+  border: 1px solid var(--primary);
+}
+
+@media screen and (max-width: 735px) {
+  .button-copy {
+    transform: scale(0.9);
   }
 }
 
