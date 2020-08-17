@@ -42,7 +42,6 @@ import { Post } from './../../models/post.interface';
 
       @media (max-width: 768px) {
         .wrapper {
-          min-height: calc(100vh - 70px);
           background: linear-gradient(rgb(25, 28, 34), rgb(8, 8, 11) 3%);
         }
       }
