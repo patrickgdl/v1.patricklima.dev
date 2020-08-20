@@ -11,6 +11,8 @@ import { Posts } from '../../posts';
     <dev-hero (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-hero>
 
     <dev-articles [pairPosts]="pairPosts$ | async" [isList]="isList"></dev-articles>
+
+    <dev-technologies></dev-technologies>
   `,
 })
 export class HomeComponent implements OnInit {

@@ -8,8 +8,6 @@ import { Post } from './../../../models/post.interface';
     <section class="section">
       <dev-articles-list [pairPosts]="pairPosts" [isList]="isList"></dev-articles-list>
     </section>
-
-    <div class="articles-gradient"></div>
   `,
   styles: [],
 })
