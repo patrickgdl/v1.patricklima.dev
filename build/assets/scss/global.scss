@@ -9,7 +9,6 @@
 @import 'custom/bio';
 @import 'custom/blockquote';
 @import 'custom/code';
-@import 'custom/home-articles';
 @import 'custom/horizontal-rule';
 @import 'custom/image';
 @import 'custom/layout';
@@ -67,6 +66,7 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  color: var(--primary);
   margin: 0;
   height: 100%;
 }
@@ -94,8 +94,7 @@ input,
 textarea,
 select,
 button {
-  font-family: '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', 'Segoe UI', 'Arial',
-    sans-serif;
+  font-family: var(--sans-serif);
 }
 
 .underline {
@@ -127,6 +126,17 @@ button {
   border: none;
   outline: none;
   background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: alverata, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-display: fallback;
+  font-weight: 700;
 }
 
 table {

@@ -9,7 +9,7 @@ $desktop_large: 1440px;
 
 body{
     /* FONTS */
-    --serif: "Merriweather", Georgia, Serif;
+    --serif: alverata, -apple-system, BlinkMacSystemFont, Arial, serif;
     --sanserif: paralucent, "-apple-system", "BlinkMacSystemFont", "Ubuntu", "Arial", sans-serif;
     --monospace: "Operator Mono", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
 
@@ -30,6 +30,7 @@ body{
     --card: #fff;
     --error: #EE565B;
     --success: #46B17B;
+    --warning: #FEF200;
     --errorBackground: rgba(238, 86, 91, 0.1);
     --horizontalRule: rgba(8, 8, 11, 0.15);
     --inputBackground: rgba(0, 0, 0, 0.05);
