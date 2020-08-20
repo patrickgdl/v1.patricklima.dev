@@ -6,12 +6,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
     <section class="section">
       <div class="heading-container">
         <h1 class="hero-heading">
-          Oi! Sou Patrick Lima - Designer & Desenvolvedor de Software.
+          Oi! Sou <a>Patrick Lima</a> - Designer & Desenvolvedor de Software.
         </h1>
       </div>
-      <div class="subheading-container">
-        <dev-bio></dev-bio>
 
+      <dev-bio></dev-bio>
+
+      <div class="subheading-container">
+        <h2>
+          Últimos Artigos
+        </h2>
         <div class="grid-controls-container">
           <button class="grid-button" (click)="onClickGrid()">
             <dev-tiles [fill]="isGridClicked ? 'var(--primary)' : 'var(--grey)'"></dev-tiles>

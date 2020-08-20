@@ -10,7 +10,11 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 3.125rem;
+
+  > h2 {
+    font-size: 2.25rem;
+  }
 
   /*DESKTOP*/
   @media screen and (max-width: $desktop) {
@@ -38,7 +42,7 @@
 }
 
 .heading-container {
-  margin: 100px 0;
+  margin: 6.25rem 0;
   max-width: 652px;
 
   /*DESKTOP*/
@@ -53,13 +57,13 @@
 }
 
 .hero-heading {
+  position: relative;
   font-style: normal;
   font-weight: 500;
   font-size: 3.25rem;
   font-family: var(--sanserif);
   line-height: 1.5;
   color: var(--primary);
-  margin: 0;
 
   /*DESKTOP*/
   @media screen and (max-width: $desktop) {
@@ -379,7 +383,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
