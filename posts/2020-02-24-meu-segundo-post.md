@@ -1,8 +1,8 @@
 ---
 title: This is my second post
 author: Patrick Lima
-hero: "assets/img/hero.jpg"
-coverImage: "assets/img/hero.jpg"
+hero: '//images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9'
+coverImage: '//images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9'
 description: blog second and ok description
 timeToRead: 3
 published: true
@@ -15,12 +15,12 @@ Sometimes we need to execute JavaScript when an element is resized.
 
 Current solutions are **based on the viewport dimension**, **not** on **element dimensions**.
 
-ResizeObserver is a new API which allows us to react to element resizing. 
+ResizeObserver is a new API which allows us to react to element resizing.
 
 There are a few steps required to use it properly with Angular. You have to make sure:
 
-* to unobserve on destroy
-* that change detection is triggered
+- to unobserve on destroy
+- that change detection is triggered
 
 I found it to cumbersome to do it on every component. That's why I've created a library to simplify the usage with Angular. 🚀
 
@@ -66,14 +66,14 @@ Here is an example on how to use ResizeObserver to subscribe to a resize event o
 You can observe multiple elements with one ResizeObserver. That's why we have an array of entries.
 
 ```javascript
-const observer = new ResizeObserver(entries => {
-  entries.forEach(entry => {
-    console.log("width", entry.contentRect.width);
-    console.log("height", entry.contentRect.height);
+const observer = new ResizeObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log('width', entry.contentRect.width);
+    console.log('height', entry.contentRect.height);
   });
 });
 
-observer.observe(document.querySelector(".my-element"));
+observer.observe(document.querySelector('.my-element'));
 ```
 
 This is how an entry looks like:
@@ -97,7 +97,7 @@ This is how an entry looks like:
 Since we subscribed to an observer, we need to unsubscribe as well:
 
 ```javascript
-const myEl = document.querySelector(".my-element");
+const myEl = document.querySelector('.my-element');
 
 // Create observer
 const observer = new ResizeObserver(() => {});
@@ -127,8 +127,8 @@ Let's create a component which displays its width.
 
 ```typescript
 @Component({
-  selector: "my-component",
-  template: "{{ width }}px"
+  selector: 'my-component',
+  template: '{{ width }}px',
 })
 export class MyComponent {
   width = 500;
@@ -146,7 +146,7 @@ export class MyComponent implements OnInit {
   constructor(private host: ElementRef) {}
 
   ngOnInit() {
-    const observer = new ResizeObserver(entries => {
+    const observer = new ResizeObserver((entries) => {
       const width = entries[0].contentRect.width;
       console.log(width);
     });
@@ -168,13 +168,10 @@ We can easily fix that by manually running it in the zone.
 export class MyComponent implements OnInit {
   width = 500;
 
-  constructor(
-    private host: ElementRef, 
-    private zone: NgZone
-  ) {}
+  constructor(private host: ElementRef, private zone: NgZone) {}
 
   ngOnInit() {
-    const observer = new ResizeObserver(entries => {
+    const observer = new ResizeObserver((entries) => {
       this.zone.run(() => {
         this.width = entries[0].contentRect.width;
       });
@@ -194,13 +191,10 @@ export class MyComponent implements OnInit, OnDestroy {
   width = 500;
   observer;
 
-  constructor(
-    private host: ElementRef, 
-    private zone: NgZone
-  ) {}
+  constructor(private host: ElementRef, private zone: NgZone) {}
 
   ngOnInit() {
-    this.observer = new ResizeObserver(entries => {
+    this.observer = new ResizeObserver((entries) => {
       this.zone.run(() => {
         this.width = entries[0].contentRect.width;
       });
@@ -224,13 +218,10 @@ export class MyComponent implements OnInit, OnDestroy {
   width$ = new BehaviorSubject<number>(0);
   observer;
 
-  constructor(
-    private host: ElementRef, 
-    private zone: NgZone
-  ) {}
+  constructor(private host: ElementRef, private zone: NgZone) {}
 
   ngOnInit() {
-    this.observer = new ResizeObserver(entries => {
+    this.observer = new ResizeObserver((entries) => {
       this.zone.run(() => {
         this.width$.next(entries[0].contentRect.width);
       });
@@ -253,27 +244,21 @@ export class MyComponent implements OnInit, OnDestroy {
 
 📦 https://www.npmjs.com/package/ng-resize-observer
 
-
 1. Install `ng-resize-observer`
 2. Import and use the providers
 3. Inject the NgResizeObserver stream
 
 ```typescript
-import { NgModule, Component } from "@angular/core";
-import {
-  ngResizeObserverProviders,
-  NgResizeObserver
-} from "ng-resize-observer";
+import { NgModule, Component } from '@angular/core';
+import { ngResizeObserverProviders, NgResizeObserver } from 'ng-resize-observer';
 
 @Component({
-  selector: "my-component",
-  template: "{{ width$ | async }} px",
-  providers: [...ngResizeObserverProviders]
+  selector: 'my-component',
+  template: '{{ width$ | async }} px',
+  providers: [...ngResizeObserverProviders],
 })
 export class MyComponent {
-  width$ = this.resize$.pipe(
-    map(entry => entry.contentRect.width)
-  );
+  width$ = this.resize$.pipe(map((entry) => entry.contentRect.width));
 
   constructor(private resize$: NgResizeObserver) {}
 }
@@ -285,7 +270,7 @@ Want to try it out? [Here is a live example on Stackblitz](https://stackblitz.co
 
 # Make the web resizable 🙌
 
-ResizeObservers allow us to run code exactly when we need it. I hope I could give you an overview over this new API. 
+ResizeObservers allow us to run code exactly when we need it. I hope I could give you an overview over this new API.
 
 If you want to use it in your Angular application, give **ng-resize-observer** a try and let me know what you think.
 

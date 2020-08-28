@@ -21,44 +21,34 @@ import { Post } from './../../../models/post.interface';
       </div>
       <div class="post-time-to-read">{{ post.timeToRead }} min de leitura</div>
     </section>
-
-    <div class="sc-12nwk4i-7 hKKrUd">
+    <div class="article-hero-image">
       <div class="nkuvch-0 vLBY gatsby-image-wrapper" style="position:relative;overflow:hidden">
         <div style="width:100%;padding-bottom:68.75%"></div>
-        <picture
-          ><source
+        <picture>
+          <source
             type="image/webp"
             srcset="
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop&w=800&q=80&fm=webp&h=550  800w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=1600&h=1100&q=100&fm=webp       1600w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=3200&h=2200&q=100&fm=webp       3200w
+              {{post.coverImage}}?w=800&amp;h=550&amp;q=100&amp;fm=webp     800w,
+              {{post.coverImage}}??w=1600&amp;h=1100&amp;q=100&amp;fm=webp 1600w,
+              {{post.coverImage}}?w=3200&amp;h=2200&amp;q=100&amp;fm=webp  3200w
             "
-            sizes="(max-width: 3200px) 100vw, 3200px" />
+            sizes="(max-width: 3200px) 100vw, 3200px"
+          />
           <source
-            srcset="
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=800&h=550&q=100    800w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=1600&h=1100&q=100 1600w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=3200&h=2200&q=100 3200w
-            "
-            sizes="(max-width: 3200px) 100vw, 3200px" />
+            srcset="{{post.coverImage}}?w=800&h=550&q=100 800w, {{post.coverImage}}?w=1600&h=1100&q=100 1600w, {{post.coverImage}}?w=3200&h=2200&q=100 3200w"
+            sizes="(max-width: 3200px) 100vw, 3200px"
+          />
           <img
             sizes="(max-width: 3200px) 100vw, 3200px"
-            srcset="
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=800&h=550&q=100    800w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=1600&h=1100&q=100 1600w,
-              https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=3200&h=2200&q=100 3200w
-            "
-            src="https://images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?w=3200&h=2200&q=100"
+            srcset="{{post.coverImage}}?w=800&h=550&q=100 800w, {{post.coverImage}}?w=1600&h=1100&q=100 1600w, {{post.coverImage}}?w=3200&h=2200&q=100 3200w"
+            src="{{ post.coverImage }}?w=3200&h=2200&q=100"
             alt=""
             loading="lazy"
             style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 500ms ease 0s;"
-        /></picture>
+          />
+        </picture>
       </div>
     </div>
-
-    <!-- <div class="article-hero-image">
-      <img [src]="post.hero" />
-    </div> -->
   `,
   styleUrls: ['./post-hero.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
