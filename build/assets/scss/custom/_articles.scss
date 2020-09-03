@@ -14,6 +14,7 @@
 
   > h2 {
     font-size: 2.25rem;
+    margin: 0;
   }
 
   /*DESKTOP*/
@@ -128,14 +129,11 @@
 .limit-to-two-lines,
 .articles-title,
 .article-excerpt {
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  overflow-wrap: normal;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  white-space: normal;
-  overflow: hidden;
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  color: var(--grey);
 
   /*PHABLET*/
   @media screen and (max-width: $phablet) {
@@ -340,7 +338,7 @@
 .article-metadata {
   font-weight: 500;
   color: var(--grey);
-  opacity: 0.40;
+  opacity: 0.4;
 
   /*PHABLET*/
   @media screen and (max-width: $phablet) {

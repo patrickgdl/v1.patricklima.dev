@@ -6,17 +6,17 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
     <aside #progressBar class="aside-container">
       <div class="aside-align">
         <div>
-          <div class="overlap-container"></div>
-        </div>
-      </div>
-      <div class="progress-container" tabIndex="{-1}">
-        <div class="track-line" aria-hidden="true">
-          <div #progressIndicator class="progress-line"></div>
+          <div class="overlap-container">
+            <div tabindex="-1" class="progress-container">
+              <div aria-hidden="true" class="track-line">
+                <div #progressIndicator class="progress-line"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </aside>
   `,
-  styles: [],
 })
 export class ProgressComponent implements OnInit {
   @ViewChild('progressBar', { static: true }) progressBar: ElementRef;
@@ -33,8 +33,9 @@ export class ProgressComponent implements OnInit {
     this.progressBarEl = this.progressBar.nativeElement;
     this.scrollProgressEl = this.scrollProgress.nativeElement;
 
-    if (document.getElementById('articleNext')) {
-      this.articleNext = document.getElementById('articleNext').offsetHeight;
+    const articleNext = document.getElementById('articleNext');
+    if (articleNext) {
+      this.articleNext = articleNext.offsetHeight;
     } else {
       this.articleNext = 0;
     }

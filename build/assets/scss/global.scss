@@ -9,6 +9,7 @@
 @import 'custom/bio';
 @import 'custom/blockquote';
 @import 'custom/code';
+@import 'custom/headings';
 @import 'custom/horizontal-rule';
 @import 'custom/image';
 @import 'custom/layout';
@@ -126,17 +127,6 @@ button {
   border: none;
   outline: none;
   background: transparent;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: alverata, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  font-display: fallback;
-  font-weight: 700;
 }
 
 table {

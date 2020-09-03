@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <section class="section">
       <header class="tech-header">
-        <h2>Tecnologias que utilizo</h2>
+        <h2>Tecnologias</h2>
         <label>Tecnologias JAMstack que uso para impulsionar o desenvolvimento.</label>
       </header>
 

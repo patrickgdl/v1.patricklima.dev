@@ -24,7 +24,7 @@ There are a few steps required to use it properly with Angular. You have to make
 
 I found it to cumbersome to do it on every component. That's why I've created a library to simplify the usage with Angular. 🚀
 
-# ✨React to element dimension changes
+## ✨React to element dimension changes
 
 Many changes in screen size or element size can be handled with pure CSS. But sometimes we **need to know when an element is resized** and execute some logic in JavaScript.
 
