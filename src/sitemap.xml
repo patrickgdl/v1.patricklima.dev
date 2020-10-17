@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://patricklima.dev/</loc>
+<lastmod>2020-10-08</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://patricklima.dev/post</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>http://patricklima.dev/about</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>http://patricklima.dev/projects</loc>
+<changefreq>weekly</changefreq>
+</url>
+</urlset>
