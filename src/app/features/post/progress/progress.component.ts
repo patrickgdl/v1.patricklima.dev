@@ -5,12 +5,10 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
   template: `
     <aside #progressBar class="aside-container">
       <div class="aside-align">
-        <div>
-          <div class="overlap-container">
-            <div tabindex="-1" class="progress-container">
-              <div aria-hidden="true" class="track-line">
-                <div #progressIndicator class="progress-line"></div>
-              </div>
+        <div class="overlap-container">
+          <div tabindex="-1" class="progress-container">
+            <div aria-hidden="true" class="track-line">
+              <div #progressIndicator class="progress-line"></div>
             </div>
           </div>
         </div>

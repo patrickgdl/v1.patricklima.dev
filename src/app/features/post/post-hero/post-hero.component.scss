@@ -35,8 +35,6 @@ h1 {
 @media (max-width: 768px) {
   .post-hero {
     min-height: 100vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     background: rgb(250, 250, 250);
   }
 }
@@ -87,7 +85,7 @@ h1 {
 
 .post-time {
   max-width: 1220px;
-  padding: 0px 2.5rem;
+  padding: 0px 2rem;
   display: block;
   width: 100%;
   position: absolute;
@@ -101,13 +99,6 @@ h1 {
   .post-time {
     max-width: 100%;
     display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .post-time {
-    display: block;
-    padding: 0px 2.5rem;
   }
 }
 

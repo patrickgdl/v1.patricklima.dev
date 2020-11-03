@@ -17,7 +17,7 @@ of the whole section and append them to our $next slice. */-->
     <!--/* We use that diff number (if > 0) to grab the first x number of articles */-->
 
     <section id="articleNext" class="section">
-      <h3 class="footer-next-heading">Mais artigos meus</h3>
+      <h3 class="footer-next-heading">Mais artigos</h3>
       <div class="footer-spacer"></div>
       <div class="next-articles-grid" numberOfArticles="{numberOfArticles}">
         <div class="post-row">
@@ -27,15 +27,9 @@ of the whole section and append them to our $next slice. */-->
                 <img src="" class="article-image" />
               </div>
               <div>
-                <h2 class="article-title">
-                  Titulo do Artigo
-                </h2>
-                <p class="article-excerpt">
-                  Descrição do Artigo
-                </p>
-                <div class="article-metadata">
-                  1 de Janeiro de 2006" · 5 min leitura
-                </div>
+                <h2 class="article-title">Titulo do Artigo</h2>
+                <p class="article-excerpt">Descrição do Artigo</p>
+                <div class="article-metadata">1 de Janeiro de 2006" · 5 min leitura</div>
               </div>
             </div>
           </a>

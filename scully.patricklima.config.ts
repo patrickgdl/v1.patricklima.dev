@@ -1,11 +1,15 @@
+import { setPluginConfig } from '@scullyio/scully';
+
+setPluginConfig('md', { enableSyntaxHighlighting: true });
+
 exports.config = {
   projectRoot: './src/app',
-  outDir: './build',
+  outDir: './dist/static',
   routes: {
     '/post/:slug': {
       type: 'contentFolder',
       slug: {
-        folder: './posts'
+        folder: './src/posts'
       }
     }
   }
