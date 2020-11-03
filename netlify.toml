@@ -1,3 +1,6 @@
 [build]
   command = "npm run release"
   publish = "dist/static"
+
+[build.environment]
+  NODE_VERSION = "12"
