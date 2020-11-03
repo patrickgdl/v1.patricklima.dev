@@ -272,21 +272,8 @@
 }
 
 .article-title {
-  word-break: keep-all;
-  line-height: 1.333;
-  font-weight: bold;
-  color: var(--primary);
   font-size: 21px;
-  font-family: var(--serif);
-  margin-bottom: 10px;
   transition: color 0.3s ease-in-out;
-  text-overflow: ellipsis;
-  overflow-wrap: normal;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  white-space: normal;
-  overflow: hidden;
 
   /*DESKTOP*/
   @media screen and (max-width: $desktop) {
