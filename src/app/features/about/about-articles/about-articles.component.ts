@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Post } from 'src/app/models/post.interface';
-import { Posts } from 'src/app/posts';
+
+import { AvailablePosts } from './../../../available-posts';
+import { Post } from './../../../models/post.interface';
 
 @Component({
   selector: 'dev-about-articles',
   template: `
-    <section class="section author-alc-section">
+    <section class="section author-section">
       <div class="author-alc">
-        <!-- <div class="post-row-alt">
-        </div> -->
-
-        <dev-articles [pairPosts]="pairPosts$ | async" [isList]="true"></dev-articles>
+        <div class="section">
+          <dev-articles-list [pairPosts]="pairPosts$ | async" [isList]="true"></dev-articles-list>
+        </div>
       </div>
     </section>
   `,
@@ -20,10 +20,10 @@ import { Posts } from 'src/app/posts';
 export class AboutArticlesComponent implements OnInit {
   pairPosts$: Observable<Post[][]>;
 
-  constructor(private _posts: Posts) {}
+  constructor(private availablePosts: AvailablePosts) {}
 
   ngOnInit() {
-    this.pairPosts$ = this._posts.posts$.pipe(
+    this.pairPosts$ = this.availablePosts.posts$.pipe(
       map((posts) => {
         // TODO: order by date and show only published
         const pair = posts.reduce((result, value, index, array) => {

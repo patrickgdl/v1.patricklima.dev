@@ -5,6 +5,14 @@ a {
   color: var(--accent);
 }
 
+.highlighter {
+  background: linear-gradient(90.53deg, #B3AEF5 -10.49%, #d2bded 23.27%, #e7bdbd 42.92%, #EAA879 71.18%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+
 a:visited {
   color: var(--accent);
   opacity: 0.85;

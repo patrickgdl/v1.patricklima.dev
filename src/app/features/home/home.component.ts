@@ -2,24 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { AvailablePosts } from '../../available-posts';
 import { Post } from './../../models/post.interface';
-import { Posts } from '../../posts';
 
 @Component({
   selector: 'dev-home',
   template: `
-    <dev-hero (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-hero>
+    <section class="section">
+      <dev-hero></dev-hero>
 
-    <dev-articles [pairPosts]="pairPosts$ | async" [isList]="isList"></dev-articles>
+      <dev-bio></dev-bio>
 
-    <dev-technologies></dev-technologies>
+      <dev-last-articles (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-last-articles>
+
+      <dev-articles-list [pairPosts]="pairPosts$ | async" [isList]="isList"></dev-articles-list>
+
+      <dev-technologies></dev-technologies>
+    </section>
   `,
 })
 export class HomeComponent implements OnInit {
   pairPosts$: Observable<Post[][]>;
   isList = false;
 
-  constructor(private _posts: Posts) {}
+  constructor(private availablePosts: AvailablePosts) {}
 
   ngOnInit() {
     /**
@@ -27,7 +33,7 @@ export class HomeComponent implements OnInit {
      * and turning it into an array of pairs of articles [[{}, {}], [{}, {}], [{}, {}]...]
      * This makes it simpler to create the grid
      */
-    this.pairPosts$ = this._posts.posts$.pipe(
+    this.pairPosts$ = this.availablePosts.posts$.pipe(
       map((posts) => {
         // TODO: order by date and show only published
         const pair = posts.reduce((result, value, index, array) => {

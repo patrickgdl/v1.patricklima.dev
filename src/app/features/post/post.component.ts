@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Posts } from '../../posts';
+import { AvailablePosts } from '../../available-posts';
 import { Post } from './../../models/post.interface';
 import { HighlightService } from './../../shared/services/highlight.service';
 
@@ -28,10 +28,10 @@ import { HighlightService } from './../../shared/services/highlight.service';
 export class PostComponent implements OnInit, AfterViewChecked {
   currentPost$: Observable<Post>;
 
-  constructor(private router: Router, private posts: Posts, private highlightService: HighlightService) {}
+  constructor(private router: Router, private availablePosts: AvailablePosts, private highlightService: HighlightService) {}
 
   ngOnInit() {
-    this.currentPost$ = this.posts.posts$.pipe(map((posts) => posts.filter((e) => e.route === this.router.routerState.snapshot.url).pop()));
+    this.currentPost$ = this.availablePosts.posts$.pipe(map((posts) => posts.filter((e) => e.route === this.router.routerState.snapshot.url).pop()));
   }
 
   ngAfterViewChecked() {

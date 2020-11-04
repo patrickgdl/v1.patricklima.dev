@@ -8,8 +8,8 @@ import { Post } from './models/post.interface';
 const dateRegex = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
 
 @Injectable()
-export class Posts {
-  constructor(private _scullyRoutes: ScullyRoutesService) {}
+export class AvailablePosts {
+  constructor(private scullyRoutes: ScullyRoutesService) {}
 
   /**
    * Taking the array of ScullyRoutes,
@@ -19,7 +19,7 @@ export class Posts {
    * sorting it by date
    */
 
-  posts$ = this._scullyRoutes.available$.pipe(
+  posts$ = this.scullyRoutes.available$.pipe(
     map(routeList => {
       return routeList
         .filter((route: ScullyRoute) => route.route.startsWith(`/post/`))

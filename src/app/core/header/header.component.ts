@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
   copyTextEl: HTMLInputElement;
   tooltipEl: HTMLElement;
 
-  constructor(private _themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
     this.moonOrSunIcon = this.moonOrSun.nativeElement;
@@ -86,7 +86,7 @@ export class HeaderComponent implements OnInit {
 
   toggleColors() {
     if (localStorage.getItem('isLight') === 'true') {
-      this._themeService.makeDark();
+      this.themeService.makeDark();
 
       this.moonIcon.classList.add('mask-to-sun-animation');
       this.moonOrSunIcon.classList.add('to-sun-animation');
@@ -104,7 +104,7 @@ export class HeaderComponent implements OnInit {
 
       localStorage.setItem('isLight', 'false');
     } else {
-      this._themeService.makeLight();
+      this.themeService.makeLight();
 
       this.moonIcon.classList.add('mask-to-moon-animation');
       this.moonOrSunIcon.classList.add('to-moon-animation');

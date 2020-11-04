@@ -5,7 +5,7 @@ export const darkTheme = {
   secondary: '#fff',
   grey: '#73737D',
   'background-color': '#111216',
-  accent: '#FFD91A',
+  accent: '#B3AEF5',
   hover: 'rgba(255, 255, 255, 0.07)',
   gradient: 'linear-gradient(180deg, #111216 0%, rgba(66, 81, 98, 0.36) 100%)',
   articleText: '#fff',

@@ -8,17 +8,17 @@ import { ThemeService } from './shared/services/theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private _themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
     if (localStorage.getItem('isLight') === null) {
-      localStorage.setItem('isLight', 'true');
+      localStorage.setItem('isLight', 'false');
     }
 
     if (localStorage.getItem('isLight') === 'false') {
-      this._themeService.makeDark();
+      this.themeService.makeDark();
     } else {
-      this._themeService.makeLight();
+      this.themeService.makeLight();
     }
   }
 }

@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 
         <dev-about-articles></dev-about-articles>
       </section>
-      <div class="authors-gradient"></div>
     </section>
   `,
 })
