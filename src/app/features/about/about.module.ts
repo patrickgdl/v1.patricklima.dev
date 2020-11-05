@@ -1,3 +1,4 @@
+import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,6 @@ import { AboutComponent } from './about.component';
 
 @NgModule({
   declarations: [AboutComponent, AboutHeroComponent, AboutArticlesComponent],
-  imports: [CommonModule, AboutRoutingModule, SocialLinksModule, ArticlesListModule],
+  imports: [CommonModule, AboutRoutingModule, SocialLinksModule, ArticlesListModule, LayoutModule],
 })
 export class AboutModule {}

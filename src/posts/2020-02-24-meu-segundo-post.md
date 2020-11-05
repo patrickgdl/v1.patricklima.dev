@@ -1,5 +1,5 @@
 ---
-title: This is my second post
+title: 'Reactive Forms in Angular: Dynamically Creating Form Fields With FormArray'
 author: Patrick Lima
 hero: '//images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9'
 coverImage: '//images.unsplash.com/photo-1597424216514-fa9aa7e371ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9'
