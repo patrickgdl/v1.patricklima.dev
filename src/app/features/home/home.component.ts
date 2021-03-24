@@ -8,17 +8,17 @@ import { Post } from './../../models/post.interface';
 @Component({
   selector: 'dev-home',
   template: `
-    <section class="section">
+    <div class="hero">
       <dev-hero></dev-hero>
 
       <dev-bio></dev-bio>
 
-      <dev-last-articles (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-last-articles>
+      <!--dev-last-articles (clickedGrid)="makeGrid()" (clickedRows)="makeRows()"></dev-last-articles>
 
       <dev-articles-list [pairPosts]="pairPosts$ | async" [isList]="isList"></dev-articles-list>
 
-      <dev-technologies></dev-technologies>
-    </section>
+      <dev-technologies></dev-technologies-->
+    </div>
   `,
 })
 export class HomeComponent implements OnInit {

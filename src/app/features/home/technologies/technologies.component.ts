@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'dev-technologies',
   template: `
-    <header class="tech-header">
+    <!--header class="tech-header">
       <h2>Tecnologias</h2>
       <label>Tecnologias JAMstack que uso para impulsionar o desenvolvimento.</label>
-    </header>
+    </header-->
 
     <div class="tech-logos">
       <div>

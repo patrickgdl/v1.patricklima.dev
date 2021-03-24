@@ -1,8 +1,23 @@
 .layout-styled{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
     position: relative;
+
     background: var(--background-color);
     -webkit-transition: var(--color-mode-transition);
     -o-transition: var(--color-mode-transition);
     transition: var(--color-mode-transition);
-    min-height: 100vh;
+}
+
+main {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
 }

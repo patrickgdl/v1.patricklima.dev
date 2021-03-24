@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
         <p class="bio-text">
-          De Araucária, Paraná - Brasil. Angular e CSS. Aprendendo Python para Data Science e Machine Learning.
+          De Araucária, Paraná - Brasil. Frameworks Javascript e CSS. Aprendendo Python para Data Science e Machine Learning.
         </p>
       </a>
     </div>

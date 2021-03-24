@@ -9,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <h1 class="author-heading highlighter">Patrick Lima</h1>
       <p class="author-subheading">
-        Sou desenvolvedor de software e atualmente trabalho como analista na
-        <a href="https://www.corbion.com/" class="highlighter" target="_blank" rel="noopener">Corbion</a>. Eu principalmente desenvolvo front-end com Angular e
-        CSS. Aprendendo Python para Data Science e Machine Learning.
+        Sou desenvolvedor de software e atualmente trabalho como Analista de Sistemas na
+        <a href="https://www.madeiramadeira.com.br/" class="highlighter" target="_blank" rel="noopener">MadeiraMadeira</a>. Eu principalmente desenvolvo front-end com Angular, React e
+        CSS. Me aventurando recentemente com Stitches e Next.js. Aprendendo Python para Data Science e Machine Learning como especialização.
       </p>
-      <div class="author-social">
+      <!--div class="author-social">
         <div class="social-icon-outer">
           <div class="social-icon-container">
             <dev-social-links></dev-social-links>
           </div>
         </div>
-      </div>
+      </div-->
     </div>
   `,
 })
