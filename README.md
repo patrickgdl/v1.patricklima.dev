@@ -1,4 +1,4 @@
-# patricklima.dev
+# patricklima.netlify.app
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/504c4a47-a51f-48f7-810d-6c0fd97b6e25/deploy-status)](https://app.netlify.com/sites/patricklima/deploys)
 
