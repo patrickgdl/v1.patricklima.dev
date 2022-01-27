@@ -6,12 +6,12 @@ Source code for [patricklima.dev](https://patricklima.dev), blog website inspire
 
 <div>
 <a href="https://patricklima.dev" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="Live Website" width="295px" />
 </a>
 </div>
 
 <div>
 <a href="https://www.figma.com/file/oMvhscXQx2BuQQXRm81f3f/My-Personal-Website?node-id=0%3A1" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="Figma Website" width="295px" />
 </a>
 </div>
