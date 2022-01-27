@@ -5,11 +5,11 @@
 Source code for [patricklima.netlify.app](https://patricklima.netlify.app/).
 
 <div>
-<a href="https://patricklima.netlify.app/" target="_blank">/>
+<a href="https://patricklima.netlify.app/" target="_blank"></a>
 </a>
 </div>
 
 <div>
-<a href="https://www.figma.com/file/oMvhscXQx2BuQQXRm81f3f/My-Personal-Website?node-id=0%3A1" target="_blank">/>
+<a href="https://www.figma.com/file/oMvhscXQx2BuQQXRm81f3f/My-Personal-Website?node-id=0%3A1" target="_blank"></a>
 </a>
 </div>
